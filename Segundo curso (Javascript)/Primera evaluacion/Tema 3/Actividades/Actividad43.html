@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            .cuadro1{
+                 width:400px;
+                 height:500px;
+                 border:1px black solid;
+                 position:absolute;
+            }
+
+            .cuadro2{
+                 width:400px;
+                 height: 500px;
+                 border:1px black solid;
+                 margin-left:500px;
+                 position:absolute;
+            }
+
+
+        </style>
+    </head>
+<body>
+    <div class="cuadro1">
+            <iframe id="cuadro1" frameborder="0" width="400" height="500"></iframe>
+    </div>
+    <div class="cuadro2">
+            <iframe id="cuadro2" frameborder="0"  width="400" height="500"></iframe>
+    </div>
+
+        <script>
+
+            function cargar(){
+
+                var webs= [["http://www.elcorteingles.es"],
+                        ["https:google.es"],
+                        ["https://aulacampus.sharepoint.com/daw-segundo/SitePages/Inicio.aspx"]
+                    ];
+
+                var numWeb= Math.floor(Math.random()*3);
+                var numMarco= Math.floor(Math.random()*2)+1;
+                var marco="";
+                
+                if (numMarco==1){
+                    marco=document.getElementById("cuadro1");
+                    marco.src=webs[numWeb];
+                }else{
+                    marco=document.getElementById("cuadro2");
+                    marco.src=webs[numWeb];
+                }
+        
+            }
+
+            var mitiempo=setInterval(cargar, 3000);
+        </script>
+    
+</body>
+</html>

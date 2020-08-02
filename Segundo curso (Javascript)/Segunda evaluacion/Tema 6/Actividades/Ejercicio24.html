@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+        </style>
+        <script>
+                function activar(){
+                    var elemento= document.getElementById("empleados");
+
+                    elemento.disabled=false;
+
+                }
+
+                function desactivar(){
+                    var elemento= document.getElementById("empleados");
+
+                    elemento.disabled=true;
+
+                }
+        </script>
+
+    </head>
+
+      <body>
+
+            <select name="empleados" id="empleados">    
+                    <option value="Carlos" selected="selected">Carlos</option>
+                    <option value="Joan">Joan</option>
+                    <option value="Nacho">Nacho</option>
+                    <option value="Alberto">Alberto</option>
+            </select>
+       
+   <button onclick="activar()">Activar</button> 
+   <button onclick="desactivar()">Desactivar</button> 
+</body>
+   </html>

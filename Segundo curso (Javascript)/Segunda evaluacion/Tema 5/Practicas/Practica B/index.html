@@ -1,0 +1,119 @@
+<html>
+<head>
+<script>
+        function valida() {
+           
+            var nombre=document.getElementById('cuadro').value;
+            var apellidos=document.getElementById('apellidos').value;
+            var direccion=document.getElementById('direccion').value;
+            var poblacion=document.getElementById('poblacion').value;
+            var codigoPostal=document.getElementById('codigoPostal').value;
+            var telefono=document.getElementById('telefono').value;
+            var movil=document.getElementById('movil').value;
+            var dni=document.getElementById('dni').value;
+            var cuentacorriente=document.getElementById('cuentacorriente').value;
+            var cuota=document.getElementById('cuota').value;
+            var fecha=document.getElementById('fecha').value;
+            var numHijos=document.getElementById('numHijos').value;
+            var correo=document.getElementById('correo').value;
+
+                //verificamos nombre
+                if(!(/^\w{3,30}$/.test(nombre)) ) {
+                        alert('nombre NO Válido');
+                    return false;
+                }
+
+                //verificamos apellidos
+                if(!(/^\w{3,60}$/.test(apellidos)) ) {
+                        alert('apellidos NO Válido');
+                    return false;
+                }
+
+                 //verificamos direccion
+                 if(!(/^\w{3,60}$/.test(direccion)) ) {
+                        alert('direccion NO Válido');
+                    return false;
+                }
+
+                 //verificamos poblacion
+                 if(!(/^\w{3,30}$/.test(poblacion)) ) {
+                        alert('poblacion NO Válido');
+                    return false;
+                }
+
+                //verificamos codigoPostal
+                if(!(/^\d{5}$/.test(codigoPostal)) ) {
+                        alert('codigoPostal NO Válido');
+                    return false;
+                }
+
+                //verificamos telefono
+                if(!(/^\(\d{3}\)\d{3}\-\d{3}$/.test(telefono)) ) { 
+                        alert('telefono NO Válido');
+                    return false;
+                }
+
+                //verificamos movil
+                if(!(/^\6\d{2}\-\d{3}\-\d{3}$/.test(movil)) ) { 
+                        alert('movil NO Válido');
+                    return false;
+                }
+
+                //verificamos dni
+                if(!(/^\d{2}\.\d{3}\.\d{3}\-\w{1}$/.test(dni)) ) {
+                        alert('dni NO Válido');
+                    return false;
+                }
+
+                //verificamos cuenta corriente
+                if(!(/^\d{4}\-\d{4}\-\d{2}\-\d{10}$/.test(cuentacorriente)) ) {
+                        alert('cuenta corriente NO Válida');
+                    return false;
+                }
+
+                //verificamos cuota mensual
+                if(!(/^\d+\.\d+$/.test(cuota)) ) { // no me sale cuota personal
+                        alert('cuota mensual NO Válida');
+                    return false;
+                }
+
+                //verificamos cumpleaños
+                if(!(/^\d{2}\/\d{2}\/\d{4}$/.test(fecha)) ) {
+                        alert('cumpleanios NO Válido');
+                    return false;
+                }
+
+                //verificamos correo
+                if(!(/^\w{3,}\@\w{3,}\.\w{2,3}$/.test(correo)) ) {
+                        alert('correo NO Válido');
+                    return false;
+                }
+                return true;
+        }
+
+
+
+</script>
+</head>
+<body>
+<form onsubmit="return valida()" method="POST" action="">
+
+    Nombre:<input type="text" id="cuadro"  size="20"><br><br>
+    Apellidos:<input type="text" id="apellidos"  size="20"><br><br>
+    Direccion:<input type="text" id="direccion"  size="20"><br><br>
+    Poblacion:<input type="text" id="poblacion"  size="20"><br><br>
+    Codigo postal:<input type="text" id="codigoPostal"  size="20"><br><br>
+    Telefono:<input type="text" id="telefono"  size="20"><br><br>
+    Movil:<input type="text" id="movil"  size="20"><br><br>
+    DNI:<input type="text" id="dni"  size="20"><br><br>
+    Numero Cuenta corriente:<input type="text" id="cuentacorriente"  size="20"><br><br>
+    Cuota mensual:<input type="text" id="cuota" size="20"><br><br>
+    Fecha :<input type="text" id="fecha" size="20"><br><br> 
+    Numero de hijos :<input type="text" id="numHijos" size="20"><br><br> 
+    Correo: <input type="text" id="correo">
+
+    <input type="submit" name="validar" value="validar">
+</form>
+
+</body>
+</html>

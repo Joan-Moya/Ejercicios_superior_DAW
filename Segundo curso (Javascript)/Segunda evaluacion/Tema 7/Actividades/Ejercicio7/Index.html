@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Web Storage</title>
+
+            <script type="text/javascript">
+
+                    function anadePaciente(){
+
+                            var codigoPaciente=document.getElementById('codigoPaciente').value;
+                            var nombre=document.getElementById('nombre').value;
+                            var apellidos=document.getElementById('apellidos').value;
+                            var fecha=document.getElementById('fecha').value;
+                            var hora=document.getElementById('hora').value;
+                            
+                            var datosPaciente = {"Nombre": nombre, "Apellidos": apellidos, "Fecha": fecha, "Hora": hora}; 
+                            sessionStorage.setItem(codigoPaciente, JSON.stringify(datosPaciente));
+                    }
+
+
+
+                    function mostrarPaciente(){
+
+                            var codigoPaciente=document.getElementById('codigoPaciente').value;
+                            var datosString = sessionStorage.getItem(codigoPaciente);
+
+                            resultado = JSON.parse(datosString);
+                        
+                            document.getElementById('nombre').value=resultado["Nombre"];
+                            document.getElementById('apellidos').value=resultado["Apellidos"];
+                            document.getElementById('fecha').value=resultado["Fecha"];
+                            document.getElementById('hora').value=resultado["Hora"];
+
+                    }
+
+                    function limpiarVista() {
+
+                            var codigoPaciente=document.getElementById('codigoPaciente').value="";
+                            var nombre=document.getElementById('nombre').value="";
+                            var apellidos=document.getElementById('apellidos').value="";
+                            var fecha=document.getElementById('fecha').value="";
+                            var hora=document.getElementById('hora').value="";
+
+                    }
+
+                    function borrarTodo() {
+                            
+                        var codigoPaciente=document.getElementById('codigoPaciente').value;
+                        sessionStorage.removeItem(codigoPaciente);
+
+                        limpiarVista();
+                        alert ("datos borrados");
+                    }
+            </script>
+</head>
+    <body>
+        <form name="formProductos">
+                Codigo del Paciente:<input type="text" name="codigoPaciente" id="codigoPaciente"><br>
+                Nombre:<input type="text" name="nombre" id="nombre"><br>
+                Apellidos:<input type="text" name="Apellido" id="apellidos"><br>
+                Fecha:<input type="text" name="Apellido" id="fecha"><br>
+                Hora:<input type="text" name="Apellido" id="hora"><br>
+
+                <!--Botones-->
+                <input type="button" onclick="anadePaciente()" name="guardar"id="guardar" value="Guardar"><br>
+                <input type="button" onclick="mostrarPaciente()" name="mostrar" id="mostrar" value="Mostrar Datos"><br>
+                <input type="button" onclick="limpiarVista()" name="limpiar"id="limpiar" value="Borrar Pantalla"><br>
+                <input type="button" onclick="borrarTodo()" name="borrar"id="borrar" value="Borrar Datos"><br>
+        </form>
+    </body>
+</html>

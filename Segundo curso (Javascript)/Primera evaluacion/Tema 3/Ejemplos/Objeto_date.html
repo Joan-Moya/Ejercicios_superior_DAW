@@ -1,0 +1,34 @@
+<script>
+    var fecha_actual = new Date();
+    var fecha_nac = new Date(1989, 10, 15, 12, 45, 23);
+
+    document.write("Fecha Actual: "+fecha_actual+"<br>");
+    document.write("Fecha Nacimiento: "+fecha_nac+"<br>");
+    
+    var tiempo = fecha_actual - fecha_nac; //esto devuelve el numero en milisegundos
+    document.write (tiempo+" milisegundos"+ "<br>");
+    document.write("Edad: "+Math.floor(tiempo/(1000*60*60*24*365.25))+" años<br>");
+
+
+    //ahora vamos a extraer la informacion de los bojetos tipo date
+    document.write("Año: "+fecha_actual.getFullYear()+"<br>");
+    document.write("Mes: "+fecha_actual.getMonth()+"<br>");
+    document.write("Dia: "+fecha_actual.getDate()+"<br>");
+    document.write("Dia de la semana (0-6): "+fecha_actual.getDay()+"<br>");
+    document.write("Horas: "+fecha_actual.getHours()+"<br>");
+    document.write("Minutos: "+fecha_actual.getMinutes()+"<br>");
+    document.write("Horas: "+fecha_actual.getSeconds()+"<br>");
+
+    //ahora vamos a asignar valores
+    document.write("<hr>");
+    fecha_nac.setYear(1970);
+    fecha_nac.setMonth(1);
+    fecha_nac.setDate(24);
+    fecha_nac.setHours(10);
+    fecha_nac.setMinutes(45);
+    fecha_nac.setSeconds(12);
+    document.write("Fecha nac: "+fecha_nac+"<br>");
+    //ahora vamos a mostrar la fecha como cadena
+    document.write("Hora formato hh:mm:ss "+
+    fecha_actual.toLocaleDateString()+"<br>");
+</script>

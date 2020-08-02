@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Peliculas>
+    <pelicula>
+        <codigo>100</codigo>
+        <titulo>Casper</titulo>
+        <tema>Aventuras</tema>
+        <duracion>124</duracion>
+        <precio>2.50</precio>
+        <cmoral>Todos los publicos</cmoral>
+    </pelicula>
+    <pelicula>
+        <codigo>115</codigo>
+        <titulo>Casper</titulo>
+        <tema>Aventuras</tema>
+        <duracion>124</duracion>
+        <precio>2.50</precio>
+        <cmoral>Todos los publicos</cmoral>
+    </pelicula>
+    <pelicula>
+        <codigo>123</codigo>
+        <titulo>Casper</titulo>
+        <tema>Aventuras</tema>
+        <duracion>124</duracion>
+        <precio>2.50</precio>
+        <cmoral>Todos los publicos</cmoral>
+    </pelicula>
+</Peliculas>

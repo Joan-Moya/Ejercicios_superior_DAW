@@ -1,0 +1,38 @@
+
+<body>
+
+	<script type="text/javascript">
+
+        var nota=0;
+        var suma=0;
+        var aptoNoApto="";
+        var suma2=0;
+
+        for(var cont=0; cont<3; cont++){
+            nota= parseInt(prompt("Pon una nota: "));
+            suma+=nota;
+        }
+
+        
+        suma=suma/3;
+
+        if(suma>=5){
+            document.write("La media sale aprobada con un: "+suma);
+        }else{
+            aptoNoApto= prompt("El alumno que ha sacado en la recuperacion?: ");
+
+            if(aptoNoApto=="apto"){
+                document.write("La media es de un 5");
+            }else if(aptoNoApto=="no apto"){
+                document.write("La media es de un 1");
+            }
+        }
+
+        
+        
+       
+
+	</script>
+
+</body>
+</html>

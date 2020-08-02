@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title></title>
+
+        <style>
+            
+        </style>
+        
+        <script>
+            
+            function selecciona() {
+                var nodos = document.querySelectorAll(".orden"); 
+                var i;
+                    for (i = 0; i < nodos.length; i++) {
+                        nodos[i].style.backgroundColor = "grey"; 
+                    }
+            }
+        </script>
+    </head>
+<body>
+
+<h2>Esta es la lista desordenada</h2>
+        <ul>
+            <li>Elemento1</li>
+            <li>Elemento2</li>
+            <li>Elemento3</li>
+         </ul>
+
+<h2>Esta es la lista ordenada</h2>        
+         <ol>
+             <li class="orden">Elemento1</li>
+             <li class="orden">Elemento2</li>
+             <li class="orden">Elemento3</li>
+         </ol>
+
+<button onclick="selecciona()">Seleccionar lista ordenada</button>
+</body>
+</html>

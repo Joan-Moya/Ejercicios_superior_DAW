@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+            
+            var numeros= new Array(2,10,6,15,45,3,2,3,58,67,7,87,8,7,6,5,54);
+
+            function comprobarPos(numeros){//pasamos por parametro el array
+                var arrayMultiplos = new Array();
+
+                for(indice in numeros){
+                    if(indice%5==0){//aqui vemos si el numero puesto es multiplo de 5
+                        arrayMultiplos.push(numeros[indice]);//si es multiplo de 5 lo añadimos al array
+                    }
+                }
+                return arrayMultiplos;//retornamos el array de los numeros multiplos
+            }
+
+            document.write("Los numeros multiplos de 5 puestos en el array son="+comprobarPos(numeros));
+            
+        </script>
+
+      
+    </body>
+</html>

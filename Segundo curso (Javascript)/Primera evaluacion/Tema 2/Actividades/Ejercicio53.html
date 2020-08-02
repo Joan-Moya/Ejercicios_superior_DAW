@@ -1,0 +1,32 @@
+<body>
+
+	<script type="text/javascript">
+
+      var codigo=0;
+      var claveAcceso=1234;
+      var cont=0;
+      var yesOno=0;
+      do{
+          codigo=parseInt(prompt("Pon la clave de acceso"));
+          cont++
+
+          if(codigo==claveAcceso){
+              yesOno=1;
+          }else{
+
+          }
+
+      }while(codigo!=claveAcceso || cont>4);
+
+      if(claveAcceso=1){
+          document.write("La caja fuerte se ha habierto");
+      }else{
+          document.write("Tu intentos han terminado");
+      }
+      
+    
+
+    </script>
+    
+</body>
+</html>

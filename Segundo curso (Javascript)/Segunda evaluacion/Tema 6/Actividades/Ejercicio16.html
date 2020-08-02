@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            div{border:1px black solid;}
+        </style>
+        <script>
+            function ocultar(){
+                var parrafos= document.getElementsByName("parrafo2");
+                
+                for(pos=0; pos<parrafos.length;pos++){
+                    parrafos[pos].style.display = 'none';
+                } 
+            }
+
+        </script>
+
+    </head>
+
+      <body>
+        
+         <div>
+             <p>Parrafo1</p>
+             <p>Parrafo2</p>
+             <p>Parrafo3</p>
+         </div>
+    <br>
+         <div>
+                <p name="parrafo2">Parrafo1</p>
+                <p name="parrafo2">Parrafo2</p>
+                <p name="parrafno2">Parrafo3</p>
+        </div>
+   
+       
+   <button onclick="ocultar()">Ocultar</button> </body>
+   </html>

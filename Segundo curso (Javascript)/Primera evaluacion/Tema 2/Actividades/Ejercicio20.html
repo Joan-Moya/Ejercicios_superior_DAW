@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+		var numeroPedido = parseInt(prompt("Pon un numero que se tiene que adivinar: "));
+		var numeroPedido2 = parseInt(prompt("que numero crees que es?: "));
+
+		while(numeroPedido != numeroPedido2){
+			if(numeroPedido2 > numeroPedido){
+				document.write("El numero puesto es mayor <br>");
+			}else{
+				document.write("El numero puesto es menor <br>");
+			}
+			numeroPedido2 = parseInt(prompt("que numero crees que es?: "));
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<body>
+
+	<script type="text/javascript">
+
+     var num=0;
+     var cont=0;
+
+     num=parseInt(prompt("Pon un numero"));
+
+     for(var i=1; i<=num; i++){
+
+         if(num%i==0){
+             cont++;
+         }
+     }
+
+     if(cont>2){
+         document.write("el numero no es primo");
+     }else{
+         document.write("el numero es primo");
+     }
+    
+
+    </script>
+    
+</body>
+</html>

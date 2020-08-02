@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+        var codigoArticulo=0;
+        var cantidadVendidaLitros=0;
+        var precioPorLitro=0;
+        var factiracionTotal=0;
+        var facturasMayoresDe600=0;
+        var cantidadVendidaFactura1=0;
+
+        var totalCantidadVendida=0; /*vaqui voy a ir sumando las cantidades de los articulos vendidos para luego
+        calcular la facturación total suponiendo que el precio por litro es siempre el mismo*/
+
+        for(var contador=1; contador<=5; contador++){
+            
+            codigoArticulo= parseInt(prompt("Pon el codigo del articulo: "));
+            cantidadVendidaLitros= parseInt(prompt("Pon la cantidad vendida en litros: "));
+            precioPorLitro= prompt("Pon el precio por litro: "); //no he puesto parseint porque el precio puede ser decimal
+
+            totalCantidadVendida+=cantidadVendidaLitros;
+            
+            if(cantidadVendidaLitros>600){
+                facturasMayoresDe600++;//aqui sumamos si la cantidad es mayor a 600;
+            }
+
+            if(contador==1){
+                cantidadVendidaFactura1=cantidadVendidaLitros;//aqui guardamos el valor de la cantidad vendida en litros de la primera factura
+            }
+
+
+        }
+        facturacionTotal=totalCantidadVendida*precioPorLitro
+
+        document.write("La factucacion total es de: "+facturacionTotal+" Eur <br>");
+        document.write("La cantidad de litros vendidos en el articulo 1 es de: "+cantidadVendidaFactura1+"<br>");
+        document.write(+facturasMayoresDe600+" facturas han sido mayores a 600 euros");
+       
+
+	</script>
+
+</body>
+</html>

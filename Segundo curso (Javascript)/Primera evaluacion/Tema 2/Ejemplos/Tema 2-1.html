@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Mostrar por pantalla</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			//como escribir algo por pantalla
+			document.write("<b>Este es un mensaje de texto</b><br>");
+			document.write("Esta \"clase\" es de Javascript<br>");
+			document.write("CSS\\Javascript\\PHP\\HTML<br>");
+
+
+			var mi_variable_1 = 30; //creamos una variable
+			var mi_variable_2 = mi_variable_1 + 10; //creamos una variable y le sumamos valor
+			var mi_variable_3 = prompt('Introduce un valor:'); //introducimos valor a una variable
+			document.write(mi_variable_1+'<br>'); //imprimimos el valor de una variable
+			document.write(mi_variable_2+'<br>');
+			document.write(mi_variable_3+'<br>');
+			edad = 18;//creamos una variable de tipo numeroca
+			document.write(edad+'<br>');
+			var alumnos = ["Luis", "Pedro", "Ana"]; //creamos un array de nombres
+			document.write(alumnos[1]+"<br>");
+			var coche = {"marca":"Volvo","Precio":12000, "Unidades":12};//creamos un array con las posiciones defininas por nombres
+			document.write(coche['marca']+"<br>");
+			// Recorre el array asociativo
+			for (var pos in coche) {
+				document.write(coche[pos]+"<br>");
+			}
+		</script>
+	</body>
+</html>

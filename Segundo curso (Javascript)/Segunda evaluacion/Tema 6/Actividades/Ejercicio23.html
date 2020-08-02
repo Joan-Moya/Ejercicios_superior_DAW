@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+        table{
+            border:1px black solid;
+             border-collapse: collapse;
+        }
+        td{
+            border:1px black solid;
+             border-collapse: collapse;
+
+        }
+        </style>
+        <script>
+
+            function anadeElemento(){
+                var parrafos= document.getElementsByTagName("td");
+
+                    for(pos=0; pos<parrafos.length;pos++){
+                        parrafos[pos].style.backgroundColor='red';
+                        }
+            }
+        </script>
+
+    </head>
+
+      <body>
+
+        <table>
+            <td>Elemento1</td>
+            <td>Elemento2</td>
+            <td>Elemento3</td>
+            <td>Elemento4</td>
+        </table>
+       
+   <button onclick="anadeElemento()">A&ntilde;ade puntos.</button> </body>
+   </html>

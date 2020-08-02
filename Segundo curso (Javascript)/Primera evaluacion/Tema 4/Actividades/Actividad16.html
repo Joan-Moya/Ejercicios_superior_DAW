@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+        table,td{
+            border:1px black solid;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <script>
+            
+            var datosVuelo= [
+                ["IB 8434","Iberia","Ibiza","10:15",210],
+                ["U2 8226","EasyJet","Londres","11:45",75],
+                ["FR 7209","Ryanair","Ibiza","12:05",350],
+            ];
+            var nuevoVuelo=["IB 8456","Iberia","Málaga","10:55","160"];
+            var nuevoVuelo2=["VY 1176","Vueling","Tenerife","11:30","230"]
+            datosVuelo.push(nuevoVuelo);
+            datosVuelo.push(nuevoVuelo2);
+
+            document.write("<table>"); 
+            document.write("<tr> <td>Vuelo</td> <td>Compañia</td> <td>Destino</td> <td>Salida</td> <td>Plazas</td></tr>")
+            for(i in datosVuelo) {
+                document.write("<tr>"); 
+                    for(j in datosVuelo[i]){
+                     document.write("<td>"+datosVuelo[i][j]+"</td>");
+                  }
+            document.write("</tr>");
+            }
+                document.write("</table>");
+        </script>
+    </body>
+</html>

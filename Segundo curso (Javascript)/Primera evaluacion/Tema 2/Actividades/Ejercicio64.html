@@ -1,0 +1,50 @@
+<body>
+
+	<script type="text/javascript">
+
+    var precioOriginal=0;
+    var codigoPromocional="";
+    var tipoIva="";
+    var descuento=0;
+
+        precioOriginal=prompt("Pon el precio del producto");
+        document.write("Base Imponible: "+precioOriginal+"<br>");
+
+
+        codigoPromocional=prompt("Pon el codigo promocional");
+        
+        if(codigoPromocional=="nopro"){
+            descuento=0;;
+        }else if(codigoPromocional=="mitad"){
+            descuento=precioOriginal/2;
+        }else if(codigoPromocional=="meno5"){
+            descuento=precioOriginal-5;
+        }else if(codigoPromocional=="5porc"){
+            descuento=precioOriginal*0.05;
+        }
+        
+        document.write("Precio con codigo promocional "+codigoPromocional+" es: "+descuento+"<br>");
+
+
+        tipoIva=prompt("Que iva quieres aplicar?");
+
+        var precioConDescuento=precioOriginal-descuento;
+        var importeIva=0;
+
+        if(tipoIva=="general"){
+             importeIva=precioConDescuento*0.21;
+        }else if(tipoIva=="reducido"){
+            importeIva=precioConDescuento*0.10;
+        }else if(tipoIva=="superreducido"){
+            importeIva=precioConDescuento*0.04;
+        }
+
+        document.write("El iva "+tipoIva+" aplicado es: "+importeIva+"<br>");
+
+         var precioFinal=precioOriginal-descuento+importeIva;
+         document.write("El precio final es: "+precioFinal);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            img{
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+    </head>
+<body>
+    <script>
+        function queBoton(event) {
+            // La propiedad button del objeto event devuelve el boton // del ratón pulsado 0=izquierdo 1=medio 2=derecho 
+            switch(event.button){
+                case 0: event.width="200px"; 
+                case 1: event.width="500px";
+                case 3: event.width="600px";
+            }
+        }
+    </script>
+    <img src="imagen1.png" onklick="queBoton(event);">;
+
+    
+</body>
+</html>

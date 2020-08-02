@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>DOM 2</title>
+<style>
+div {
+border: 1px solid black;
+}
+</style>
+<script>
+function azulesDIV(){
+var divs= document.getElementsByName("azul");
+alert(divs.length);
+for(pos=0; pos<divs.length;pos++){
+divs[pos].style.backgroundColor='blue';
+}
+}
+</script>
+</head>
+<body onload="azulesDIV()">
+<div name="azul">Primer div</div>
+<div>Segundo div</div>
+<div name="azul">Tercer div</div>
+</body>
+</html>

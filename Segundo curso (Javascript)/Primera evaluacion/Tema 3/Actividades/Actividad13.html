@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Actividad 11</title>
+    </head>
+<body>
+
+<script>
+    var valor= prompt("Pom un numero");
+    var valorEntero = parseInt(valor);
+    var valorDecimal= parseFloat(valor);
+
+    if(isNaN(valorEntero)){ //nan devuelve true si no es un numero
+        document.write("No es un numero<br>");
+    }else{
+        document.write("El numero "+valorEntero+" es un numero<br>");
+    }
+
+    if(isNaN(valorDecimal)){ //nan devuelve true si no es un numero
+        document.write("No es un numero<br>");
+    }else{
+        document.write("El numero "+valorDecimal+" es un numero<br>");
+    }
+
+
+</script>
+</body>
+</html>

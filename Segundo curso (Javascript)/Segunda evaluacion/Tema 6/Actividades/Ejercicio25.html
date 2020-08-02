@@ -1,0 +1,26 @@
+<html>
+   <head>
+<script>
+    var cantidad=0;
+        function cantidadElementos(){
+                var elementos= document.getElementById("lista");
+                
+                cantidad=elementos.children.length;
+
+                alert("La lista tiene este numero de elementos: "+cantidad);
+            }
+</script>
+   </head>
+<body>
+     <p>-----LISTA DE LIBROS-----</p>
+        <ul id="lista">
+            <li id="elemento1">Donde los arboles cantan</li>
+            <li id="elemento2">Memorias de idún</li>
+            <li id="elemento3">El monje que vendió su ferrari</li>
+        </ul>
+
+        <button onclick="cantidadElementos()">Cantidad</button> 
+        
+       
+</body>
+</html>

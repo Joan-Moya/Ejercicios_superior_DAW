@@ -1,0 +1,21 @@
+<html>
+<head>
+        <script>
+           
+           var vecesPulsadas=0;
+           
+                function anadeElemento() {
+                    var nodo = document.createElement("LI"); nodo.innerHTML="Elemento Puesto"; 
+                    document.getElementById("elementos").appendChild(nodo);
+                    vecesPulsadas++;
+                    alert("Veces añadido= "+vecesPulsadas);
+                 }    
+        </script>
+</head>
+<body>
+        <ul id="elementos">
+          <li>Elemento</li>
+          <li>Elemento</li>
+        </ul>
+            <button onclick="anadeElemento()">Pulsar</button> </body>
+</html>

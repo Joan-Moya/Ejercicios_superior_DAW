@@ -1,0 +1,88 @@
+<html>
+    <body>
+        <script>
+            
+        class Hospital{
+           constructor(codHospital,nombreHospital,direccion,telefono,poblacion,codPostal){
+               this.codHospital=codHospital;
+               this.nombreHospital=nombreHospital;
+               this.direccion=direccion;
+               this.telefono=telefono;
+               this.poblacion=poblacion;
+               this.codPostal=codPostal;
+           }
+
+           mostrarDatos(){
+               document.write("Codigo del hospital= "+this.codHospital+"<br>");
+               document.write("Nombre del hospital= "+this.nombreHospital+"<br>");
+               document.write("Direccion del hospital= "+this.direccion+"<br>");
+               document.write("Telefono del hospital= "+this.telefono+"<br>");
+               document.write("Poblacion del hospital= "+this.poblacion+"<br>");
+               document.write("CodigoPostal del hospital= "+this.codPostal)+"<br>";
+           }
+
+        } 
+
+        class Medico{
+           constructor(codMedico,nombre,apellidos,dni,direccion,telefono,poblacion,codPostal,fechaNacimiento,especialidad,sueldo,hospital){
+               this.codMedico=codMedico;
+               this.nombre=nombre;
+               this.apellidos=apellidos;
+               this.dni=dni;
+               this.direccion=direccion;
+               this.telefono=telefono;
+               this.poblacion=poblacion;
+               this.codPostal=codPostal;
+               this.fechaNacimiento=fechaNacimiento;
+               this.especialidad=especialidad;
+               this.sueldo=sueldo;
+               this.hospital=hospital;
+           }
+           cambiaSueldo(sueldopuesto){
+               this.sueldo=sueldopuesto;
+           }
+           retencionmedico(retencion){
+               this.sueldo=this.sueldo+(this.sueldo*retencion);
+           }
+
+           mostrarDatos(){
+               document.write("Codigo del medico: "+this.codMedico+"<br>");
+               document.write("Nombre del medico: "+this.nombre+"<br>");
+               document.write("Apellidos del medico: "+this.apellidos+"<br>");
+               document.write("DNI del medico: "+this.dni+"<br>");
+               document.write("Direccion del medico: "+this.direccion+"<br>");
+               document.write("Telefono del medico: "+this.telefono+"<br>");
+               document.write("Poblacion del medico: "+this.poblacion+"<br>");
+               document.write("CodigoPostal del medico: "+this.codPostal+"<br>");
+               document.write("Fecha de nacimiento del medico: "+this.fechaNacimiento+"<br>");
+               document.write("Especialidad del medico: "+this.especialidad+"<br>");
+               document.write("Sueldo del medico: "+this.sueldo+"<br>");
+               this.hospital.mostrarDatos();
+
+           }
+
+        } 
+        
+
+        document.write("<br><br>-----AQUI IMPRIMIMOS LOS DATOS DEL HOSPITAL-----<br><br>");
+
+
+        hospitalRibera= new Hospital("er456","Ribera","calle ribera",6545356,"Alzira","5646");
+        medicoDigestivo = new Medico ("erivrfn","Joan","Moya Torremocha","dsndiuvv","dcndcn",947863672,"Burjassot",4358,"23/3/2000","traumatologia",2000,hospitalRibera);
+        medicoTraumatologo = new Medico ("erivrfn","Manuel","solves reig","dsndiuvv","dcndcn",947863672,"Burjassot",4358,"23/3/2000","traumatologia",2000,hospitalRibera);
+
+        medicoTraumatologo.cambiaSueldo(2300);
+        
+        hospitalRibera.mostrarDatos();
+
+        document.write("<br><br>-----AQUI IMPRIMIMOS A LOS DOS MEDICOS-----<br><br>");
+
+        medicoDigestivo.retencionmedico(0.20);
+        medicoTraumatologo.retencionmedico(0.20);
+
+        medicoDigestivo.mostrarDatos();
+        document.write("<br><hr>");
+        medicoTraumatologo.mostrarDatos();
+        </script>
+    </body>
+</html>

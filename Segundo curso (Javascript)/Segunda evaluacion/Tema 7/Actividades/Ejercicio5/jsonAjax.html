@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Ajax JSON</title>
+    <style>
+        
+    table,td{
+        border:1px black solid;
+        border-collapse: collapse;
+    }
+    </style>
+    <script>
+            var peticion = new XMLHttpRequest();
+
+            peticion.onreadystatechange = function(){
+
+                if (peticion.readyState == 4 && peticion.status == 200) {
+                    var datosJson = JSON.parse(peticion.responseText);
+                     peliculasRecibidas = datosJson.listadoPeliculas;
+
+                    var datos="<table>"
+
+                    datos+="<tr>";
+                            datos+="<td>Codigo</td> <td>Titulo</td> <td>Tema</td> <td>Duracion</td> <td>Precio</td> <td>Cmoral</td>";
+                    datos+="</tr>";
+
+
+                        for (var i=0; i<peliculasRecibidas.length;i++){
+                            var codigoPelicula = peliculasRecibidas[i].codigo;
+                            var nombrePelicula = peliculasRecibidas[i].titulo;
+                            var temaPelicula = peliculasRecibidas[i].tema;
+                            var duracionPelicula = peliculasRecibidas[i].duracion;
+                            var precioPelicula = peliculasRecibidas[i].precio;
+                            var cmoralPelicula = peliculasRecibidas[i].cmoral;
+                            datos+="<tr>";
+                            datos+="<td>"+codigoPelicula+"</td> <td>"+nombrePelicula+"</td> <td>"+temaPelicula+"</td> <td>"+duracionPelicula+"</td> <td>"+precioPelicula+"</td> <td>"+cmoralPelicula+"</td>";
+                            datos+="</tr>";
+                        }
+                         datos+="</table>";
+                         document.getElementById("caja").innerHTML=datos;
+                }
+            };
+            peticion.open("GET", "peliculas.json", true);
+            peticion.send();
+    </script>
+</head>
+<body>
+    <div id="caja"></div>
+</body>
+</html> 

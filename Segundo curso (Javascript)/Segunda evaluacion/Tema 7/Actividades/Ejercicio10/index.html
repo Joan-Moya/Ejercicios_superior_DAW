@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Video HTML5</title>
+    <script>
+            function playVideo() {
+                var vid = document.getElementById("myVideo");
+                vid.play();
+            }
+
+            function pararVideo() {
+                var vid = document.getElementById("myVideo");
+                vid.pause();
+            }
+
+            function masvol() {
+                var vid = document.getElementById("myVideo");
+                vid.volume+=0.1;
+            }
+
+            function menos() {
+                var vid = document.getElementById("myVideo");
+                vid.volume-=0.1;
+            }
+            function mute() {
+                var vid = document.getElementById("myVideo");
+                vid.muted();
+            }
+    </script>
+</head>
+<body>
+        <video id="myVideo" width="320" height="240" poster="horton.jpg">
+        <source src="horton.mp4" type="video/mp4">
+        El navegador no soporta video HTML5.
+        </video>
+        <hr>
+        <button onclick="playVideo()" type="button">Play Video</button>
+        <button onclick="pararVideo()" type="button">Parar Video</button>
+        <button onclick="masvol()" type="button">Mas volumen</button>
+        <button onclick="menos()" type="button">Menos volumen</button>
+        <button onclick="mute()" type="button">Mutear</button>
+</body>
+</html>

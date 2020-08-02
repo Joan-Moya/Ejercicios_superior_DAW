@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title></title>
+
+        <style>
+        </style>
+        
+        <script>
+            function cambiaTexto(){
+
+                var pasoElemento=document.getElementById("texto").innerHTML;
+                var pasoElemento2=parseInt(pasoElemento)+1;
+                document.getElementById("texto").innerHTML= pasoElemento2;
+            }
+            
+        
+        </script>
+    </head>
+<body >
+    <h1 id="texto">1</h1>
+    <button onclick="cambiaTexto()">CAMBIAR</button>
+</body>
+</html>

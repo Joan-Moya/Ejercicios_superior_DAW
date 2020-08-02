@@ -1,0 +1,19 @@
+<script type="text/javascript">
+    var agente = window.navigator.userAgent;
+    var navegadores = [
+    ["Chrome","<b>Google Chrome</b> <br> <p>Logotipo del navegador Google Chrome Google Chrome es de los principales navegadores el más joven y el más popular actualmente.</p>"],
+    ["Firefox","<b>Firefox</b> <br> <p>Mozilla Firefox, o simplemente Firefox es un navegador web libre y de código abierto desarrollado por Mozilla, una comunidad global que trabaja junta para mantener una Web Abierta, pública y accesible.</p>"], 
+    ["Safari","<b>Safari</b> <br> <p>Es el complemento indispensable para los usuarios de Mac OS X, para donde fue ideado inicialmente que iba a ejecutarse y donde están la gran mayoría de usuarios que lo utilizan dentro de alrededor del 4% de usuarios en el mundo.</p>"], 
+    ["Opera","<b>Opera</b> <br> <p>Es reconocido por su velocidad, seguridad, soporte de estándares (especialmente CSS), tamaño reducido y constante innovación.</p>"], 
+    ["Trident","<b>Trident</b> <br> <p>Texto de trindent</p>"], 
+    ["MSIE","Internet Explorer"], 
+    ["Edge","<b>Edge</b> <br> <p>Microsoft Edge es un navegador web desarrollado por Microsoft, que se encuentra incluido en Windows 10, reemplazando a Internet Explorer como navegador web preestablecido. Microsoft Edge está construido en torno a los estándares web, y Microsoft se ha comprometido a actualizar Edge para integrarlo con los nuevos y existentes estándares que aún no soporta..</p>"]
+    ];
+
+    for(var i in navegadores){
+
+    if(agente.indexOf(navegadores[i][0])!=-1){
+        document.write(navegadores[i][1]);
+        break;
+    } }
+ </script>

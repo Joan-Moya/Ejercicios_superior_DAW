@@ -1,0 +1,23 @@
+<html>
+<head>
+        <script>
+            
+                function anadeElemento() {
+                    
+                    var nodo = document.createElement("p"); nodo.innerHTML="Parrafo0"; 
+                    var elementos=document.getElementById("elementos");
+                    var elemento1=elementos.firstElementChild;
+                    elementos.insertBefore(nodo,elemento1);
+                 }    
+        </script>
+</head>
+<body>
+        <div id="elementos">
+          <p>Parrafo1</p>
+          <p>Parrafo2</p>
+          <p>Parrafo3</p>
+          <p>Parrafo4</p>
+          <p>Parrafo5</p>
+        </div>
+            <button onclick="anadeElemento()">A&ntilde;adir</button> </body>
+</html>

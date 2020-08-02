@@ -1,0 +1,42 @@
+
+<html>
+    <head>
+         <title>Practica 3B</title> </head>
+  <body>
+  <form action="recivirArchivos.php" method="POST">
+        <center><h1>Formulario cines</h1></center><br><br>
+
+        Nombre y apellidos<input type="text" name="nombreYapellidos"><br> 
+        Dni: <input type="text" name="dni"><br><br><br> 
+        Pelicula<br> <SELECT NAME="peliculas" SIZE="4">
+                <OPTION value="La maquina del tiempo"> La maquina del tiempo </OPTION>
+                <OPTION value="Dos rubias de pelo en pecho"> Dos rubias de pelo en pecho </OPTION>
+                <OPTION value="Louis de funes"> Louis de funes </OPTION>
+                <OPTION value="El gendarme"> El gendarme </OPTION>
+                <OPTION value="Mi amigo el extraterrestre"> Mi amigo el extraterrestre </OPTION>
+               </SELECT><br><br> 
+
+        Fecha<br><input type="date" name="fecha"><br> <br><br> 
+
+        Entradas <input type="text" name="entradas"><br> 
+        N tarjeta <input type="text" name="numerotarjeta"><br><br>
+
+        Tipo de tarjeta:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; 4B: <input type="radio" name="tarjetas" value="4b"><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp; America Express <input type="radio" name="tarjetas" value="American Express"><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp; Servired <input type="radio" name="tarjetas" value="Servired"><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp; Red 6000 <input type="radio" name="tarjetas" value="Red 600"><br><br>
+     
+
+        Telefono <input type="text" name="Telefono"><br>
+        Correo <input type="text" name="Correo"><br><br>
+
+        <input type="checkbox" name="info" value="check">&nbsp;<br> Desea recibir informacion de las salas semanalmente<br>
+
+
+        <input type="submit" value="Enviar">
+             
+    </form>
+    </body>
+  </html>
+  

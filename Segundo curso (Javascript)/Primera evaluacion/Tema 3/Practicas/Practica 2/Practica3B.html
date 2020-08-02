@@ -1,0 +1,106 @@
+ <html>
+     <head>
+         <title>Practica 3b</title>
+         <style>
+             table,td{
+                 border:1px solid black;
+                 border-collapse: collapse;
+             }
+         </style>
+     </head>
+<body>
+
+
+        <script>
+                
+                var nombre= prompt("Pon el nombre");
+                var apellidos= prompt("Pon los apellidos");
+                var fechaNacimiento= prompt("Pon la fecha de nacimiento");
+                var direccion= prompt("Pon la direccion");
+                var poblacion= prompt("Pon el codigo postal de tu poblacion");
+                var idiomas= prompt("Que idiomas hablas?");
+                var hijos= prompt("Cuantos hijos tiene?");
+                var nombreCompleto=(apellidos+", "+nombre).toLocaleUpperCase();
+                var dia= fechaNacimiento.substr(0,2);
+                var mes= fechaNacimiento.substr(3,2)-1;
+                var anio= fechaNacimiento.substr(6,4);
+                var fechaNac=new Date(anio,mes,dia);
+                var hoy=new Date();
+                var tiempo = hoy-fechaNac;
+                var edadTotal= Math.floor(tiempo/(365.25*24*60*60*1000));
+                var posicionPatio=direccion.indexOf("nº");
+                var posicionPuerta=direccion.indexOf("Pta");
+                var calle=direccion.substring(6,posicionPatio);
+                var patio=direccion.substring(posicionPatio+2,posicionPuerta);
+                var puerta=direccion.substring(posicionPuerta+4);
+                var posicionGuion=poblacion.indexOf("-");
+                var codigoPostal=poblacion.substring(0,posicionGuion);
+                var nombrePoblacion=poblacion.substring(posicionGuion+1);
+                var numHijos=hijos.match(/-/gi).length+1;
+
+                var idiomasArray=idiomas.split(" ");
+                
+
+                
+ 
+            </script>
+
+        <center><h1>Datos del ciudadano</h1></center>
+        
+<table class="tabla">
+    <tr>
+        <td>Nombre:</td> <td><script>document.write(nombreCompleto)</script></td>
+    </tr>
+
+    <tr>
+        <td>Edad:</td> <td><script>document.write(edadTotal+" años")</script></td>
+    </tr>
+
+    <tr>
+        <td>Calle:</td> <td><script>document.write(calle)</script></td>
+    </tr>
+
+    <tr>
+        <td>Patio:</td> <td><script>document.write(patio)</script></td>
+    </tr>
+
+    <tr>
+        <td>Puerta:</td> <td><script>document.write(puerta)</script></td>
+    </tr>
+
+    <tr>
+        <td>Cod Postal</td> <td><script>document.write(codigoPostal)</script></td>
+    </tr>
+
+    <tr>
+        <td>Poblacion</td> <td><script>document.write(nombrePoblacion)</script></td>
+    </tr>
+
+    <script>
+
+        for(pos in idiomasArray){
+
+            document.write("<tr>");
+
+            if(pos==0){
+                document.write("<td>Idiomas</td>");
+            }else{
+                document.write("<td></td>");
+            }
+
+            document.write("<td>"+idiomasArray[pos]+"</td>");
+            document.write("</tr>");
+        }
+
+        
+    </script>
+
+
+    <tr>
+        <td>Hijos</td> <td><script>document.write(numHijos)</script></td>
+    </tr>
+</table>
+
+
+</body>
+</html>

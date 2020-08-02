@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+<body>
+    <form action="documento.php" method="POST">
+        
+        <h1>De que poblacion es el empleado?</h1>
+
+        <SELECT NAME="poblacion" SIZE=x>
+            <OPTION value="Valencia"> Valencia </OPTION>
+            <OPTION value="Castellon"> Castellon </OPTION>
+            <OPTION value="Alicante"> Alicante </OPTION>
+        </SELECT><br><br>
+
+
+        <h1>Que categoria laboral tiene el empleado?</h1>
+        <Select NAME="categoria" size=4>
+                <OPTION value="1 Ingenieros y Licenciados"> 1 Ingenieros y Licenciados </OPTION>
+                <OPTION value="2 Jefes Administrativos y de Taller"> 2 Jefes Administrativos y de Taller </OPTION>
+                <OPTION value="3 Ayudantes no Titulados"> 3 Ayudantes no Titulados </OPTION>
+                <OPTION value="4 Oficiales Administrativos"> 4 Oficiales Administrativos </OPTION>
+                <OPTION value="5 Subalternos"> 5 Subalternos </OPTION>
+                <OPTION value="6 Auxiliares administrativos"> 6 Auxiliares administrativos </OPTION>
+        </select>
+
+        <h1>Que nivel de ingles tiene el empleado?</h1>
+        <input type="radio" name="nivelIdioma" value="Basico">Basico<br><br>
+        <input type="radio" name="nivelIdioma" value="Intermedio">Intermedio<br><br>
+        <input type="radio" name="nivelIdioma" value="Avanzado">Avanzado<br><br>
+
+        Posee alguna discapacidad <INPUT TYPE="CHECKBOX" NAME="Check">
+
+        <input type="submit"  name="Enviar" value="Enviar">
+    </form>
+</body>
+</html>

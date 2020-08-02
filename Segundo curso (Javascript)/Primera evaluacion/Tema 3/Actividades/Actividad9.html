@@ -1,0 +1,20 @@
+<script>
+
+    var fecha_Tope= new Date();
+    var anio= parseInt(prompt("Pon el anio"));
+    var mes= parseInt(prompt("Pon el mes"));
+    var dia= parseInt(prompt("Pon el dia"));
+
+
+    var fecha_entrega = new Date(anio,mes-1,dia);
+
+    var resta= fecha_Tope-fecha_entrega;
+
+
+    if(resta>=0){
+        document.write("Aun no has superado la fecha de entrega");
+    }else{
+        document.write("Has superado la fecha de entrega");
+    }
+
+</script>

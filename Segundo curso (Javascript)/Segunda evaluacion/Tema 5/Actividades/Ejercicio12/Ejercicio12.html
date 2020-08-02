@@ -1,0 +1,24 @@
+<html>
+    <head>
+
+        <script>
+            function cambioimagen() {
+                imagenMostrar =document.getElementById('imagen').value;
+				document.getElementById('foto').src=imagenMostrar;
+            }
+        </script>
+
+</head>
+
+<body>
+        <form>
+            Seleccione una imagen:
+                 <select id="imagen" onchange="cambioimagen()">
+                    <option value="flor.png">Flor</option>
+                    <option value="montana.png">Montaña</option>
+                    <option value="mar.png">Mar</option>
+                </select>
+        </form>
+        <img src="flor.png" id="foto" width="168" height="66" />
+</body> 
+</html>

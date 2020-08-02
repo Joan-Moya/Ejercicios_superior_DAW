@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title></title>
+
+        <script>
+            function mensaje(){
+                var mensaje1= document.getElementById('cuadro').value;
+                var mensaje2="";
+
+                for (var e=0; e<mensaje1.length; e++){
+                    mensaje2+=String.fromCharCode(mensaje1.charCodeAt(e)+5);
+
+                 }
+
+                document.getElementById('cuadroTexto').value = mensaje2;
+            }
+        </script>
+    </head>
+<body>
+
+        Nombre:
+        <input type="text" id="cuadro" onkeyup="mensaje()" size="20">
+        <input type="text" id="cuadroTexto" size="20">
+</body>
+</html>

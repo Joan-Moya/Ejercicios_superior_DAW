@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Web Storage</title>
+
+            <script type="text/javascript">
+
+                    function anadeCoche(){
+                            
+                            var matricula=document.getElementById('matricula').value;
+                            var marca=document.getElementById('marca').value;
+                            var modelo=document.getElementById('modelo').value;
+                            var color=document.getElementById('color').value;
+                            var precio=document.getElementById('precio').value;
+                            
+                            var datosCoche = {"Marca": marca, "Modelo": modelo, "Color": color, "Precio": precio}; 
+                            localStorage.setItem(matricula, JSON.stringify(datosCoche));
+                    }
+
+
+
+                    function muestra(){
+                           
+                           
+                            var matricula=document.getElementById('matricula').value;
+                            var datosString = localStorage.getItem(matricula);
+
+                            resultado = JSON.parse(datosString);
+                        
+                           
+                            document.getElementById('marca').value=resultado["Marca"];
+                            document.getElementById('modelo').value=resultado["Modelo"];
+                            document.getElementById('color').value=resultado["Color"];
+                            document.getElementById('precio').value=resultado["Precio"];
+
+                            
+
+                    }
+
+                    function limpiarVista() {
+
+                            var matricula=document.getElementById('matricula').value="";
+                            var marca=document.getElementById('marca').value="";
+                            var modelo=document.getElementById('modelo').value="";
+                            var color=document.getElementById('color').value="";
+                            var precio=document.getElementById('precio').value="";
+
+                    }
+
+                    function borrarTodo() {
+                            
+                        var matricula=document.getElementById('matricula').value;
+                        localStorage.removeItem(matricula);
+
+                        limpiarVista();
+                        alert ("datos borrados");
+                    }
+            </script>
+</head>
+    <body>
+        <form name="formProductos">
+                Matricula<input type="text" name="matricula" id="matricula"><br>
+                Marca<input type="text" name="marca" id="marca"><br>
+                Modelo<input type="text" name="modelo" id="modelo"><br>
+                Precio<input type="text" name="precio" id="precio"><br>
+                Color<input type="text" name="color" id="color"><br>
+                
+
+                <!--Botones-->
+                <input type="button" onclick="anadeCoche()" name="guardar"id="guardar" value="Guardar"><br>
+                <input type="button" onclick="muestra()" name="mostrar" id="mostrar" value="Mostrar Datos"><br>
+                <input type="button" onclick="limpiarVista()" name="limpiar"id="limpiar" value="Borrar Pantalla"><br>
+                <input type="button" onclick="borrarTodo()" name="borrar"id="borrar" value="Borrar Datos"><br>
+        </form>
+    </body>
+</html>

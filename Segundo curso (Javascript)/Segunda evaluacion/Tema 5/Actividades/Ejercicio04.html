@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            .texto{
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+    </head>
+<body>
+    <script>
+        function queBoton(event) {
+            var colores = new Array("red","grey","green","yellow","purple");//creamos un array de colores
+            var random= Math.floor(Math.random()*4); //creamos una variable para que elija un color
+            
+            // La propiedad button del objeto event devuelve el boton // del ratón pulsado 0=izquierdo 1=medio 2=derecho 
+            switch(event.button){
+                case 0: event.width="200px"; 
+                case 1: event.style.color=colores[random];
+                case 3: event.width="600px";
+            }
+        }
+    </script>
+    <div class="texto" onklick="queBoton(event);">TEXTO DE PRUEBA</div>
+
+    
+</body>
+</html>

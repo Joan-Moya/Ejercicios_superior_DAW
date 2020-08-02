@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+        var nota=0;
+        var aprobados=0;
+        var suspensos=0;
+
+
+        for(var contador=1; contador<=6; contador++){
+            
+            nota= prompt("Pon una nota: ");
+
+            if(nota>=5){
+                aprobados++;
+            }else{
+                suspensos++;
+            }
+
+        }
+        
+        document.write("Cantidad de alumnos aprobados: "+aprobados+"<br>");
+        document.write("Cantidad de alumnos suspensos: "+suspensos+"<br>");
+       
+
+	</script>
+
+</body>
+</html>

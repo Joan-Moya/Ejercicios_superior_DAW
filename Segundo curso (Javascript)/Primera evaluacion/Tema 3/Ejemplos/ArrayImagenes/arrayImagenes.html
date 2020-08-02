@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Ejemplomdel objeto document</title>
+    </head>
+<body>
+    <img name="imagen" src="" border="0">
+    <script type="text/javascript">
+        var imagenes = new Array("1.jpg","2.jpg","3.jpg","4.jpg");
+        var pos = Math.round(Math.random()*3);
+        document.images["imagen"].src=imagenes[pos];
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+    <body>
+        <script>
+            
+        class Proveedor{
+           constructor(CIF,nombreEmpresa,descripcion,sector,direccion,telefono,poblacion,codPostal,correo){
+               this.cif=CIF;
+               this.nombreEmpresa=nombreEmpresa;
+               this.descripcion=descripcion;
+               this.sector=sector;
+               this.direccion=direccion;
+               this.poblacion=poblacion;
+               this.codPostal=codPostal;
+               this.correo=correo;
+           }
+           mostrarDatos(){
+               document.write("Cif= "+this.cif+"<br>");
+               document.write("Nombre de la empresa= "+this.nombreEmpresa+"<br>");
+               document.write("Descripcion del producto= "+this.descripcion+"<br>");
+               document.write("Sector= "+this.sector+"<br>");
+               document.write("Direccion= "+this.direccion+"<br>");
+               document.write("Poblacion= "+this.poblacion+"<br>");
+               document.write("Codigo postal= "+this.codPostal+"<br>");
+               document.write("Correo proporcionado= "+this.correo+"<br>");
+           }
+        } 
+
+        class Producto{
+            constructor(codProducto,nombreProducto,descripcion,categoria,peso,precio,stock,proveedor){
+                this.codProducto=codProducto;
+                this.nombreProducto=nombreProducto;
+                this.descripcion=descripcion;
+                this.categoria=categoria;
+                this.peso=peso;
+                this.precio=precio;
+                this.stock=stock;
+                this.proveedor=proveedor;
+            }
+
+            augmentaStock(unidades){
+                this.stock+=unidades;
+            }
+            disminuyeStock(unidades){
+                this.stock-=unidades;
+            }
+            ivaProducto(iva){
+                 document.write("-Precio total del producto: "+Math.trunc(this.precio*iva)+" € con iva<br>");
+            }
+            mostrarDatos(){
+                document.write("-Codigo del producto= "+this.codProducto+"<br>");
+                document.write("-Nombre del producto= "+this.nombreProducto+"<br>");
+                document.write("-Descripcion del producto= "+this.descripcion+"<br>");
+                document.write("-Categoria del producto= "+this.categoria+"<br>");
+                document.write("-Peso del producto= "+this.peso+"<br>");
+                document.write("-Precio del producto= "+this.precio+"<br>");
+                document.write("-Stock disponible= "+this.stock+"<br>");
+                document.write("-Proveedor del producto= "+this.proveedor+"<br>");
+            }
+
+        }
+            proveedorInformatica= new Proveedor("xxxx","Empresa","Persona","sector1","calle sevilla","604455987","Burjassot","45930","xxxx@gmail.com");
+            productoHardware= new Producto("efeu","iphone","movil","6","200 gramos",600,30,"apple");
+            productoSoftware= new Producto("dsfd","Avast","Anti virus","er","200 kb",120,56,"Avast");
+
+            productoHardware.augmentaStock(12);
+            productoSoftware.disminuyeStock(5);
+
+            proveedorInformatica.mostrarDatos();
+
+            document.write("<hr>");
+            productoHardware.ivaProducto(0.34);
+            productoSoftware.ivaProducto(0.20);
+            document.write("<hr>");
+
+            document.write("DATOS DE PRODUCTO HARDWARE <br>");
+            productoHardware.mostrarDatos(0.34);
+            productoHardware.ivaProducto(0.20);
+            document.write("<br>");
+
+            document.write("DATOS DE PRODUCTO SOFTWARE <br>");
+            productoSoftware.mostrarDatos(0.34);
+            productoSoftware.ivaProducto(0.20);
+            document.write("<br>");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<body>
+
+	<script type="text/javascript">
+
+     
+     var numeroIntroducido=0;
+     var cont=0;
+     var suma=0;
+
+     numeroIntroducido=parseInt(prompt("Pon el numero"));
+
+     for(var e=1; e<=numeroIntroducido; e++){
+         
+         if(e%3==0){
+             document.write(e+"<br>");
+             cont++;
+             suma+=e;
+         }
+     }
+
+     document.write("cantidad:"+cont+"<br>");
+     document.write("suma: "+suma);
+    </script>
+    
+</body>
+</html>

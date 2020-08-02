@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <style>
+        table,td{
+            border:1px black solid;
+            border-collapse:collapse;
+        }
+        </style>
+        <script>
+            
+            var curso=prompt("Que curso quieres mostrar?");
+            
+            function cursos(curso){
+                var cursos= {"1DAM":["BD, FOL, PRO, LM, SINF"],
+                "2DAM":["DWEC, DWES, DIW, DAP, EIE"],
+                "3DAM":["ISO, PAR, FHR, GBD, LM"],
+                "1SMR":["ASO, SR, IAE, SGBD, SAD"]};
+                
+                return(cursos[curso]);
+            }
+        </script>
+
+        <table>
+            <tr>
+            <td>Curso</td>
+            <td>Departamento</td>
+            </tr>
+            
+            <tr>
+                <td><script>document.write(curso);</script></td>
+                <td><script>document.write(cursos(curso));</script></td>
+            </tr>
+        </table>
+    </body>
+</html>

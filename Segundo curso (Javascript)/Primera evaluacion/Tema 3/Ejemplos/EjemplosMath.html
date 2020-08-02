@@ -1,0 +1,31 @@
+<script>
+
+    var radio = prompt("Introduce el radio");
+    var area = Math.PI * Math.pow(radio, 2); //pone el radio elevado a 2
+    document.write("El area del circuito "+radio+" es "+Math.round(area*100)/100);
+
+    document.write("<hr>");
+    //valores maximos y minimos
+    document.write("Valor minimo en Javascript "+Number.MIN_VALUE+"<br>");
+    document.write("Valor mAximo en Javascript "+Number.MAX_VALUE+"<br>");
+    var sueldo =1452.46098;
+    document.write("El sueldo vale "+sueldo.toFixed(2)+"<br>");
+    document.write("El sueldo vale "+sueldo.toPrecision(5)+"<br>");
+
+    document.write("<hr>");
+    //cantidad de caracteres en la cadena
+    var texto = "Este es un texto en Javascript";
+    document.write("Longitud del texto es: "+texto.length+" caracteres<br>");
+    document.write(texto.charAt(3)+"<br>"); //me devuelve el caracter definido comenzando desde 0 en una cadena
+    document.write(texto.charCodeAt(10)+"<br>"); //me devuelve el caracter asci definido comenzando desde 0 en una cadena
+
+
+    document.write("<hr>");
+    //concadenar textos
+    texto0="Esto es ";
+    texto1="una prueba";
+    var resultado;
+    resultado = texto0.concat(texto1);
+    document.write(resultado+"<br>");
+
+</script>

@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script>
+            
+            var poblaciones= new Array("Paises bajos","Grecia","Alemania","Suiza","Belgica","Dinamarca","Irlanda","Suecia","Finlandia","Portugal","Reino unido","Espanya","Rusia");
+            poblaciones.splice(10,0,"Polonia", "Austria" ,"Rumania");
+            poblaciones.splice(6,2);
+            poblaciones.splice(2,2,"Malta","Monaco","Noruega");
+            
+            
+                
+            var subArray=poblaciones;
+            var subArray2=subArray.reverse();
+
+            for(indice in subArray2){
+                    document.write(subArray2[indice]+"<br>");
+                }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<script>
+
+    //esto es para que solo aparezca una vez y antes de que aparezca si le aprietas a parar ya no sale
+    /*
+    var tiempo_aviso = setTimeout("alert('Han pasado 5 seg.')",5000);
+    document.write("<p onclick= 'clearTimeout(tiempo_aviso)'>Parar</p>"); */
+
+    //esto es para que aparezca un aviso cada 5 segundos aunque lo cierres
+    var tiempo_aviso = setInterval("alert('Han pasado 5 seg.')",5000);
+    document.write("<p onclick= 'clearInterval(tiempo_aviso)'>Parar Repeticiones</p>");
+    
+</script>

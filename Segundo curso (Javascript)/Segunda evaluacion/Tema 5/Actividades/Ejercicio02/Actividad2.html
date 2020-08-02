@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            img{
+                width: 300px;
+                height: 300px;
+            }
+            .container{
+                width: 500px;
+                height: 400px;
+                border:1px black solid;
+            }
+        </style>
+    </head>
+<body>
+    <script>
+
+        function cambiar(elemento){
+            var colores = new Array("red","grey","green","yellow","purple");//creamos un array de colores
+            var random= Math.floor(Math.random()*4); //creamos una variable para que elija un color
+            elemento.style.background=colores[random];
+        }
+
+         function color(elemento){
+           
+            elemento.style.background="white";
+        }
+
+
+    </script>
+    <div class="container"  onmouseover="cambiar(this)" onmouseout="color(this)"><h3>Este es un texto de muestra</h3></div>
+</body>
+</html> 

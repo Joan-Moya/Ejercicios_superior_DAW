@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+		var numeroPedido = parseInt(prompt("Pon un numero: "));
+        var suma = 0;
+        var contador=0;
+        var resultadoFinal;
+
+		while(numeroPedido >=0){
+            suma=suma+numeroPedido;
+            contador++;
+            numeroPedido = parseInt(prompt("Pon un numero: "));
+        }
+        
+        resultadoFinal=suma/contador;
+        document.write("La media de todos los numeros: "+resultadoFinal);
+        
+
+	</script>
+
+</body>
+</html>

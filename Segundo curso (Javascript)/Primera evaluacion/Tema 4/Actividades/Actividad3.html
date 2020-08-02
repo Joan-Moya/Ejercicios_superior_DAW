@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+            var sueldo=parseFloat(prompt("Pon el sueldo:")); 
+            var comision=parseFloat(prompt("Pon el porcentaje de la comision:"));
+            var retencion=parseFloat(prompt("Pon el porcentaje de la retencion: "));
+
+            function calculoRetencion(sueldo,comision,retencion){
+
+                var eurosComision=sueldo*comision;
+                var eurosRetencion=(sueldo+eurosComision)*retencion;
+                var resultado= sueldo+eurosComision-eurosRetencion;
+
+                return resultado;
+            
+            }
+            var llamadaFuncion= calculoRetencion(sueldo,comision,retencion);
+            document.write("El resultado final del sueldo es:"+llamadaFuncion);
+           
+
+
+        </script>
+    </body>
+</html>

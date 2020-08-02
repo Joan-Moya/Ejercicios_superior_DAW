@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+<body>
+
+<script>
+
+   var rojas=parseInt(prompt("Cuantas bolas rojas hay?"));
+   var negras=parseInt(prompt("Cuantas bolas negras hay?"));
+   var totalBolas=rojas+negras;
+   var contador=0;
+   var cantNegros=0;
+   var cantRojos=0;
+
+
+    do{
+        var valor1= Math.random()*totalBolas;
+
+        if(valor1<rojas){
+            cantRojos++
+        }else{
+            cantNegros++;
+        }
+        contador++;
+    }while(contador<15)
+
+    var porcentajeNegras=(cantNegros/contador)*100;
+    var porcentajeRojas=(cantRojos/contador)*100;
+
+    document.write("Bolas negras: "+porcentajeNegras.toFixed(2)+"%<br>"+ "Bolas rojas: "+porcentajeRojas.toFixed(2)+"%");
+
+</script>
+</body>
+</html>

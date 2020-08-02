@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+
+            function anadeElemento(){
+                var parrafos= document.getElementsByTagName("p");
+
+                    for(pos=0; pos<parrafos.length;pos++){
+                        parrafos[pos].innerHTML+="."; 
+                        }
+}
+        </script>
+
+    </head>
+
+      <body>
+        
+         <p>Parrafo1</p>
+         <p>Parrafo2</p>
+         <p>Parrafo3</p>
+         <p>Parrafo4</p>
+         <p>Parrafo5</p>
+
+       
+   <button onclick="anadeElemento()">A&ntilde;ade puntos.</button> </body>
+   </html>

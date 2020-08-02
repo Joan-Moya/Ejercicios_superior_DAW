@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <script>
+            
+            var moviles={"Samsung":"Galaxy S8","Apple":"Iphone8","Nokia":"Lumia230","Sony":"Xperia z2"};
+            moviles["BQ"]="Aquarios B2";
+
+            function comprobarElementos(moviles){//pasamos por parametro el array
+                var arrayModelos = new Array();
+
+                for(indice in moviles){
+                        arrayModelos.push(moviles[indice]);//si es multiplo de 5 lo añadimos al array
+                }
+                return arrayModelos;//retornamos el array de los numeros multiplos
+            }
+            
+            var llamada=comprobarElementos(moviles);
+            (llamada.sort());
+
+            for(indice in llamada){
+                        document.write(llamada[indice]+"<br>");//si es multiplo de 5 lo añadimos al array
+                }
+            
+        </script>
+
+      
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title></title>
+
+        <style>
+        </style>
+        
+        <script>
+            function accesoDOM(){
+                var textos= document.getElementById('textos');
+                var numeroHijos= textos.children.length;
+                alert (numeroHijos);
+            }
+            
+        
+        </script>
+    </head>
+<body onload="accesoDOM();">
+
+
+    <center>
+        <div id="textos">
+            <p>Texto1</p>
+            <p>Texto2</p>
+            <p>Texto3</p>
+        </div>
+    </center>
+</body>
+</html>

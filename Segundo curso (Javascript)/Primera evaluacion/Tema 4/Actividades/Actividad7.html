@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+        table,td{
+            border:1px black solid;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <script>
+            var carnet= prompt("Pon un carnet");
+
+            function imprimirCarnet(carnet){
+                var tipo="";
+               if (carnet=="AM"){
+                   tipo="Licencia Ciclomotor";
+               }else if(carnet=="A1"){
+                   tipo="Motos sin sidecar con una cilindrada máxima de 125 cc.";
+               }else if(carnet=="A2"){
+                   tipo="Motocicletas, con o sin sidecar.";
+               }else if(carnet=="A"){
+                   tipo="Motocicletas de cualquier cilindrada.";
+               }else if(carnet=="B"){
+                   tipo="Turismos, furgonetas no supere los 3.500 kg.";
+               }else if(carnet=="C1"){
+                   tipo="Automóviles entre 3.500 kg. y los 7.500 kg.";
+               }else if(carnet=="C"){
+                   tipo="Superior a los 3.500 kg. y con menos de 9 asientos.";
+               }else if(carnet=="D1"){
+                   tipo="Vehículos de más de 9 y menos de 17 plazas.";
+               }else if(carnet=="D"){
+                   tipo="Automóviles de más de 9 plazas, sin límite máximo.";
+               }else{
+                   tipo="Vehículos especiales, taxis, prioritarios y transporte escolar.";
+               }
+               return tipo;
+            }
+
+            var resultado= imprimirCarnet(carnet);
+        </script>
+
+      <table>
+          <script>
+          document.write("<td>"+carnet+"</td>"+"<td>"+resultado+"</td>");
+          </script>
+      </table>
+    </body>
+</html>

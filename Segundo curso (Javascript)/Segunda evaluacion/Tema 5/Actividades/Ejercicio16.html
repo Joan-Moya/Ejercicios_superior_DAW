@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+
+
+	<script>
+		function tamano(){
+			var colores = ["red","yellow","green","orange"];
+			var random= Math.floor(Math.random()*3);
+			document.body.style.backgroundColor=colores[random];
+		}
+	</script>
+
+
+<body onresize="tamano()">
+	Contenido de la página
+</body>
+</html>

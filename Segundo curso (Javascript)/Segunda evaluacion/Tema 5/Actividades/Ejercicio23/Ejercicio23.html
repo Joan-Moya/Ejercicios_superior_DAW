@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+            
+            function setCookie(elemento){
+                var valor=elemento.value;
+                var fecha=new Date();
+                fecha.setDate(fecha.getDate() + 5);
+                document.cookie="color=" + valor+"; expires="+fecha.toUTCString(); 
+}
+        </script>
+</head>
+<body>
+   
+    Elige un color para poner de fondo:<br><br>
+
+    <select name="colores" onchange="setCookie(this)">
+            <option value="red">Rojo</option> 
+            <option value="green">Verde</option> 
+            <option value="blue">Azul</option>
+    </select>
+
+    <a href="pagina2.html">Siguiente</a>
+
+</body>
+</html>

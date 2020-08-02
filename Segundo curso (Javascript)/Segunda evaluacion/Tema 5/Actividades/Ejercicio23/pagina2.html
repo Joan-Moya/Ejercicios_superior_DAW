@@ -1,0 +1,34 @@
+<html>
+    <head>
+            <script>
+            
+                    function getCookie(){
+                        var valCookie = document.cookie.split(";"); 
+                        for (i=0; i<valCookie.length;i++){
+                        var nom = valCookie[i].substr(0,valCookie[i].indexOf("=")); 
+                        var val = valCookie[i].substr(valCookie[i].indexOf("=")+1); 
+                        if(nom.trim()=="color") {
+                            return val;
+                            }
+                        }
+                    }
+            
+                    function ponerFondo(){
+                        var color=getCookie();
+                        document.body.style.backgroundColor=color;
+                    }
+            
+                    
+                    
+                </script>
+       
+</head>
+<body onload="ponerFondo()">
+
+
+   
+    
+</body>
+
+
+</html>

@@ -1,0 +1,28 @@
+<script>
+
+    //fechas de alta de los trabajadores
+   var fecha1= new Date(1979,5,6);
+   var fecha2= new Date(1999,8,7);
+   var fecha3= new Date(2005,4,3);
+
+    //datos de los trabajadores
+   var datosTrabajadores = [
+       {"Nombre":"Luis","Apellidos":"Sanz Campayo","Sueldo":100,"FechaAlta":fecha1},
+       {"Nombre":"Carlos","Apellidos":"Gil Berdeguer","Sueldo":100,"FechaAlta":fecha2},
+       {"Nombre":"Pepe","Apellidos":"Moya Torremocha","Sueldo":100,"FechaAlta":fecha3}
+   ];
+
+   for(var pos in datosTrabajadores){
+
+       var anio=datosTrabajadores[pos]["FechaAlta"].getFullYear();
+        if(anio<1980){
+            var retencionSueldo=datosTrabajadores[pos]["Sueldo"]*0.20;
+        }else if(anio>1980 && anio<=2000){
+            retencionSueldo=datosTrabajadores[pos]["Sueldo"]*0.15;
+        }else{
+            retencionSueldo=datosTrabajadores[pos]["Sueldo"]*0.05;
+        }
+
+        document.write("El trabajador "+datosTrabajadores[pos]["Nombre"]+" tiene el sueldo con la retencion final de: "+retencionSueldo+"<br>");
+   }
+</script>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            .cuadro1{
+                 width:400px;
+                 height:500px;
+                 border:1px black solid;
+                 position:absolute;
+            }
+
+        </style>
+    </head>
+<body>
+    <div class="cuadro1">
+            <iframe id="cuadro1" frameborder="0" width="400" height="500"></iframe>
+    </div>
+
+        <script>
+
+            function cargar(){
+
+                    //aqui tenemos las noticias emergentes
+                var webs= [["1.png","Rivera permite a Sánchez tramitar los Presupuestos y sortear el veto del Senado."],
+                            ["2.png","Apu no se irá de Los Simpson «todavía»: el productor desmiente la noticia"],
+                            ["3.png","Ciudadanos rompe la estrategia del PP que bloquea el Presupuesto. "],
+                        
+                    ];
+
+                
+             var numEmergente= Math.floor(Math.random()*3);//creamos una pagina emergente aleatoria
+             var contenido="<img src='"+webs[numEmergente][0]+"' width='60px' height='60px'>  <br>"+webs[numEmergente][1];
+             var miVentana=window.open("","","width=300,height=400");
+             miVentana.window.document.write(contenido);
+        
+            }
+
+            var mitiempo=setInterval(cargar, 10000);//recargamos cada 10 segundos
+        </script>
+    
+</body>
+</html>

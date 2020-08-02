@@ -1,0 +1,63 @@
+<script type="text/javascript">
+	
+		var marcas = new Array("Ford ","Cadillac ","jeep ","Rover ");	//array.length
+
+		document.write("Numero de elementos: "+marcas.length+"<br>");
+		document.write("Marcas: "+marcas+"<hr>");
+
+		totalElementos = marcas.push("Fiat","Maserati")				//Push lo añadiria al final del array (seria ... jeep , Rover, Fiat, Maserati).
+		document.write("Numero de elementos: "+totalElementos+"<br>");
+		document.write("Añadir al final: "+marcas);
+		document.write("<hr>");
+
+		totalElementos = marcas.unshift("Chevrolet","Porsche");		//unshift lo añadiria al principio del array (seria chevrolet, Porsche, Ford,...).
+		document.write("Numeros de elementos: "+totalElementos+"<br>");
+		document.write("Añadir al principio: "+marcas+"<br>");
+		document.write("<hr>");
+
+		primeraMarca = marcas.shift();								//Almacena la primera marca y la elimina
+		document.write("La primera marca es: "+primeraMarca+"<br>");
+		document.write("Eliminar primero: "+marcas);
+		document.write("<hr>");
+
+		primeraMarca = marcas.pop();								//Almacena la ultima marca y la elimina
+		document.write("La ultima marca es: "+primeraMarca+"<br>");
+		document.write("Eliminar final: "+marcas);
+		document.write("<hr>");
+
+		document.write("Marcas: "+marcas+"<br>");
+		var aPartirCuarta = marcas.slice(4);						//Almacena a partir de la 4 hasta el final
+		document.write("Cuarta hasta el final: "+aPartirCuarta+"<br><hr>");
+
+		var primerasTres = marcas.slice(0,3);						//Almacena desde la posicion 0 a la 3
+		document.write("Tres primeras: "+primerasTres+"<br><hr>");		
+
+		var ultimasDos = marcas.slice(-2);							//Empieza a almacenar desde las posiciones finales (por eso el -), 
+		document.write("Ultimos dos: "+ultimasDos+"<br><hr>");
+
+		document.write("Marcas: "+marcas+"<br>");
+		marcas.splice(2,0,"BMW","Ferrari");
+		document.write("Insertado posicion dos: "+marcas+"<br><hr>");
+
+		marcas.splice(0,2,"Subaru","Pontiac","Chrysler");
+		document.write("Modifica las 2 primeras: "+marcas+"<hr>");
+
+		marcas.splice(4,2);
+		document.write("Elimina dos desde la cuarta: "+marcas+"<hr>");
+
+		var marcas_inglaterra = new Array("Lotus","Jaguar");
+		var marcas_francia = new Array("Renault","Peugeot");
+
+		var todasLasMarcas = marcas.concat(marcas_francia,marcas_inglaterra);
+		document.write("Todas las marcas concatenadas: "+todasLasMarcas+"<hr>"); //concatena todos los arrays y los mete en uno
+
+		var lasMarcas = todasLasMarcas.join(" - ");		//EL join convierte un array en un string
+		document.write("Todas las marcas del tipo string: "+lasMarcas+"<hr>");
+
+		todasLasMarcas.reverse();						//Da va vuelta al array
+		document.write("Todas las marcas orden inverso: "+todasLasMarcas+"<hr>");
+
+		todasLasMarcas.sort();							//ordena por orden alfabetico
+		document.write("Todas las marcas ordenadas : "+todasLasMarcas+"<hr>");
+
+</script>

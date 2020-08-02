@@ -1,0 +1,96 @@
+<html>
+    <head>
+      <meta name="tipo_contenido"  content="text/html;" http-equiv="content-type" charset="utf-8">
+
+        <!--AQUI EMPIEZA EL APARTADO DE LOS ESTILOS DE LAS NOTICIAS EN CSS-->
+        <style>
+            body{
+                display:flex;
+                background-color:#0080FF;
+            }
+            .noticia1{
+                background-color:white;
+                width: 400px;
+                border: 1px black solid;
+                height: 400px;
+                text-align:center;
+                padding:2%;
+                margin: 3%;
+                 -webkit-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+                 -moz-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+                 box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+            }
+            .noticia2{
+                background-color:white;
+                width: 400px;
+                border: 1px black solid;
+                height: 400px;
+                text-align:center;
+                padding:2%;
+                margin: 3%;
+                 -webkit-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+                 -moz-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+                 box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+            }
+            .noticia3{
+                background-color:white;
+                width: 400px;
+                border: 1px black solid;
+                height: 400px;
+                text-align:center;
+                padding:2%;
+                margin: 3%;
+                 -webkit-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+                 -moz-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+                 box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+            }
+        </style>
+
+         <!--*********************************************-->
+
+         
+        <!--AQUI EMPIEZA EL APARTADO DE LAS FUNCIONES-->
+
+            <script>
+                function ocultar(element){
+                    var elemento = document.getElementById(element);
+                    elemento.style.display = 'none';
+                   
+                }
+            </script>
+
+        <!--*********************************************-->
+        
+    </head>
+<body>
+
+    <div class="noticia1" >
+                    <h1 onclick="ocultar('noticia1Texto')"><u>Asi es el coche electrico plegable</u></h1>
+                        <h3 id="noticia1Texto" >Este nuevo coche eléctrico plegable diseñado por la empresa City Transformer puede ser la gran <br><br>
+                            Revolución en los mercados de transportes eléctricos. Este vehículo se ha diseñado específicamente<br><br>
+                            Para poder tener una mayor facilidad al aparcar en las grandes ciudades.
+                        </h3>
+               
+    </div>
+
+    <div class="noticia2" >
+            <h1 onclick="ocultar('noticia2Texto')"><u>Si viajas a Ámsterdam no podrás hacerte la foto más típica</u></h1>
+                <h3 id="noticia2Texto" >Situadas en la plaza de los museos junto al Rijksmuseum, las letras fueron colocadas<br><br>
+
+                     hace 14 años y gracias a su juego de palabras rápidamente se convirtieron en uno de los espacios <br>
+                     más visitados de la ciudad.
+                </h3>
+       
+    </div>
+
+    <div class="noticia3" >
+        <h1 onclick="ocultar('noticia3Texto')"><u>Space x rompió el record mundial</u></h1>
+            <h3 id="noticia3Texto" >El exitoso reciente lanzamiento de un cohete Falcon 9 desde<br><br>
+                 la Base de la Fuerza Aérea Vandenberg en California, Estados Unidos, ha dado lugar a<br><br>
+                  cuatro nuevos récords para SpaceX, una clara señal de que la compañía liderada por Elon Musk<br><br>
+                   y la industria espacial comercial en general están madurando rápidamente.
+            </h3>
+   
+    </div>
+</body>
+</html>

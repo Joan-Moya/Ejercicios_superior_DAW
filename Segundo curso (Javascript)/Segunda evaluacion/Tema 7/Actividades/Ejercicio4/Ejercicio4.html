@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Envío datos XML</title>
+
+ <script>
+
+
+         var peticion = new XMLHttpRequest(); //instancia de conexion al servidor sin recargar pagina
+         
+
+
+         function enviar(){
+            var codigo = document.getElementById("codigo").value;
+            var titulo = document.getElementById("titulo").value;
+            var tema = document.getElementById("tema").value;
+            var duracion = document.getElementById("duracion").value;
+            var cmoral = document.getElementById("cmoral").value;
+
+            peticion.open("POST","peliculas.php");
+            var datosXml;
+        
+
+        peticion.onreadystatechange = function() {
+            if (peticion.readyState == 4 && peticion.status == 200){
+
+            respuesta = peticion.responseText;
+            document.getElementById("caja").innerHTML = respuesta;
+            }
+        };
+
+            peticion.setRequestHeader('Content-Type', 'text/xml');
+            var datosXml = "<?xml version='1.0' encoding='UTF-8' ?>";
+
+            datosXml += "<pelicula>";
+            datosXml += "<codigo>"+codigo+"</codigo>";
+            datosXml += "<titulo>"+titulo+"</titulo>";
+            datosXml += "<tema>"+tema+"</tema>";
+            datosXml += "<duracion>"+duracion+"</duracion>";
+            datosXml += "<cmoral>"+cmoral+"</cmoral>";
+            datosXml += "</pelicula>";
+            peticion.send(datosXml);
+
+
+         }
+ </script>
+
+</head>
+<body>
+    Pon el codigo: <input type="text" id="codigo">
+    Pon el titulo: <input type="text" id="titulo">
+    Pon el tema: <input type="text" id="tema">
+    Pon el duracion: <input type="text" id="duracion">
+    Pon el cmoral: <input type="text" id="cmoral">
+
+    <button onclick="enviar()">Enviar</button>
+
+<div id="caja"></div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title></title>
+
+        <style>
+        </style>
+        
+        <script>
+            function cambiaColor(){
+                var colores=["green","red","brown","blue","grey"];
+                var colorSeleccionado= Math.floor(Math.random()*3);
+                document.getElementById("titulo1").style.color=colores[colorSeleccionado];
+                var colorSeleccionado= Math.floor(Math.random()*3);
+                document.getElementById("titulo2").style.color=colores[colorSeleccionado];
+                var colorSeleccionado= Math.floor(Math.random()*3);
+                document.getElementById("parrafo1").style.color=colores[colorSeleccionado];
+                var colorSeleccionado= Math.floor(Math.random()*3);
+                document.getElementById("parrafo2").style.color=colores[colorSeleccionado];
+            }
+
+           
+        
+        </script>
+    </head>
+<body>
+
+    <center>
+         <h1 id="titulo1">ESTE ES EL TEXTO H1 DE PRUEBA</h1>
+         <h1 id="titulo2">ESTE ES EL TEXTO H1 DE PRUEBA</h1>
+         <p id="parrafo1">Este es el parrafo1</p>
+         <p id="parrafo2">Este es el parrafo1</p>
+    </center>
+    <br>
+    <br>
+
+    <center>
+        <button  onclick="cambiaColor()">Presionar botón</button> &nbsp; 
+    </center>
+</body>
+</html>

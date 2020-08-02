@@ -1,0 +1,18 @@
+<script>
+var fecha_actual = new Date();
+
+//le sumamos 10 dias
+var anio= fecha_actual.getFullYear()+10;
+fecha_actual.setFullYear(anio);
+
+//le sumamos 4 meses
+var mes= fecha_actual.getMonth()+4;
+fecha_actual.setMonth(mes);
+
+//le sumamos 5 dias
+var dias= fecha_actual.getDate()+5;
+fecha_actual.setDate(dias);
+
+document.write(fecha_actual);
+
+</script>

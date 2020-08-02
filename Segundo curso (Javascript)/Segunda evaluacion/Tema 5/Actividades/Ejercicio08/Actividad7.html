@@ -1,0 +1,81 @@
+<html>
+    <head>
+      <meta name="tipo_contenido"  content="text/html;" http-equiv="content-type" charset="utf-8">
+
+        <!--AQUI EMPIEZA EL APARTADO DE LOS ESTILOS DE LAS NOTICIAS EN CSS-->
+        <style>
+            body{
+                display:flex;
+                background-color:#0080FF;
+            }
+            .noticia1{
+                background-color:white;
+                width: 400px;
+                border: 1px black solid;
+                height: 400px;
+                text-align:center;
+                padding:2%;
+                margin: 3%;
+                 -webkit-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+                 -moz-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+                 box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+            }
+            .noticia2{
+                background-color:white;
+                width: 400px;
+                border: 1px black solid;
+                height: 400px;
+                text-align:center;
+                padding:2%;
+                margin: 3%;
+                 -webkit-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+                 -moz-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+                 box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+            }
+            .noticia3{
+                background-color:white;
+                width: 400px;
+                border: 1px black solid;
+                height: 400px;
+                text-align:center;
+                padding:2%;
+                margin: 3%;
+                 -webkit-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+                 -moz-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+                 box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.75);
+            }
+        </style>
+
+         <!--*********************************************-->
+
+         
+        <!--AQUI EMPIEZA EL APARTADO DE LAS FUNCIONES-->
+
+            <script>
+                function cambioColor(elemento){
+                   elemento.style.filter = "grayscale(100%)";
+                   
+                }
+                function color(elemento){
+                    elemento.style.filter= "grayscale(0%)";
+                }
+            </script>
+
+        <!--*********************************************-->
+        
+    </head>
+<body>
+
+    <div class="noticia1" >
+                    <img src="1.gif" onmouseover="cambioColor(this)" onmouseout="color(this)">
+    </div>
+
+    <div class="noticia2" >
+            <img src="2.gif" onmouseover="cambioColor(this)" onmouseout="color(this)">
+    </div>
+
+    <div class="noticia3" >
+            <img src="3.gif" onmouseover="cambioColor(this)" onmouseout="color(this)">
+    </div>
+</body>
+</html>

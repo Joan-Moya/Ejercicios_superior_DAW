@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+        .full{
+            width: 350px;
+            height: 300px;
+            margin:0 auto;
+        }
+        </style>
+    </head>
+<body>
+
+    
+        <iframe class="full" id="foto1" width='350' height='300' src="https://www.youtube.com/embed/_QjIOiy3nok" frameborder='0' allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+        
+
+        
+         <script>
+
+    var videos = ["https://www.youtube.com/embed/_QjIOiy3nok",
+        "https://www.youtube.com/embed/xFutjZEBTXs",
+        "https://www.youtube.com/embed/hXI8RQYC36Q"];
+
+
+
+    function mostrar(){
+        var numeroRandom=Math.floor(Math.random()*3);
+      
+
+        document.getElementById("foto1").src=videos[numeroRandom]; 
+ 
+        
+    }
+    var tiempo_aviso = setInterval("mostrar()",3000);
+
+
+
+
+    </script>
+
+</body>
+</html>

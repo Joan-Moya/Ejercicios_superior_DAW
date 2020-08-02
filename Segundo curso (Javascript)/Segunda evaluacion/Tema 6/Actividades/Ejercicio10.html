@@ -1,0 +1,30 @@
+<html>
+    <head>
+       <title></title>
+       <script>
+            function nodoHermanoSig() {
+
+                var valor = document.getElementById("valor"); 
+                
+                alert(valor.nextElementSibling.innerHTML); 
+                alert(valor.nextElementSibling.nextElementSibling.innerHTML); 
+                
+                }       
+        </script>
+    </head>
+        <body>
+            <table>
+                <tr>
+                    <td id="valor">Elemento1</td>
+                    <td>Elemento2</td>
+                    <td>Elemento3</td>
+                </tr>
+                <tr>
+                        <td>Elemento1.1</td>
+                        <td>Elemento2.1</td>
+                        <td>Elemento3.1</td>
+                 </tr>
+            </table>
+            <button onclick="nodoHermanoSig()">Siguiente</button>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            function fondoAzul(elemento){
+                elemento.style.backgroundColor="blue";
+                elemento.style.color="white";
+            }
+
+            function fondoBlanco(elemento){
+                elemento.style.backgroundColor="White";
+                elemento.style.color="black";
+            }
+            
+        </script>
+</head>
+<body>
+    Nombre: <input type="text" onfocus="fondoAzul(this)" onblur="fondoBlanco(this)"><br>
+    Apellidos: <input type="text" onfocus="fondoAzul(this)" onblur="fondoBlanco(this)"><br>
+    Edad: <input type="number" onfocus="fondoAzul(this)" onblur="fondoBlanco(this)"><br>
+</body>
+</html>

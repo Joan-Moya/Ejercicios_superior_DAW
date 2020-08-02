@@ -1,0 +1,18 @@
+<script>
+    var fecha_actual = new Date();
+    
+    //le restamos 5 años
+    var anio= fecha_actual.getFullYear()-5;
+    fecha_actual.setFullYear(anio);
+    
+    //le restamos 11 meses
+    var mes= fecha_actual.getMonth()-11;
+    fecha_actual.setMonth(mes);
+    
+   //le restamos 18 dias
+    var dias= fecha_actual.getDate()-18;
+    fecha_actual.setDate(dias);
+    
+    document.write(fecha_actual);
+    
+    </script>

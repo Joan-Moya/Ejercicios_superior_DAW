@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title></title>
+
+        <style>
+                body{
+                    background-image: url("wallpaper.jpg");
+                    font-size:15px;
+                    background-repeat: no-repeat;
+                    
+                }
+                h1{
+                    text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+                }
+                .botoncolor{
+                    background-color:#B40431;
+                    color:white;
+                    font-size:15px;
+                    -webkit-box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.75);
+                    box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.75);
+                    border-style:none;
+                    border-radius:10px;
+                    
+                }
+                .botonLetraGrande{
+                    border-radius:10px;
+                    font-size:15px;
+                    -webkit-box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.75);
+                    box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.75);
+                }
+                .botonLetraPeque{
+                    border-radius:10px;
+                    font-size:15px;
+                    -webkit-box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.75);
+                    box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.75);
+                }
+        </style>
+        
+        <script>
+            function cambiaColor(){
+                document.getElementById("titulo").style.color="red";
+            }
+
+            function tamanioMas(){
+                document.getElementById("titulo").style.fontSize="40px";
+            }
+
+            function tamanioMenos(){
+                document.getElementById("titulo").style.fontSize="20px";
+            }
+        
+        </script>
+    </head>
+<body>
+
+    <center>
+         <h1 id="titulo">ESTE ES EL TEXTO DE PRUEBA</h1>
+    </center>
+    <br>
+    <br>
+
+    <button id="red" class="botoncolor" onclick="cambiaColor()">Cambiar de color</button> &nbsp; 
+    <button id="15px" class="botonLetraGrande" onclick="tamanioMas()"><b>LETRA MAS GRANDE</b></button> &nbsp; 
+    <button id="10px" class="botonLetraPeque" onclick="tamanioMenos()">Letra mas pequeña</button> &nbsp;
+
+</body>
+</html>

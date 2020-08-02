@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title></title>
+
+        <style> 
+
+                table,td,th{
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                }
+    
+        </style>
+    </head>
+<body>
+
+        <script>
+                var fecha_nacimiento = new Date(1990,5,10);//esta es la fecha de nacimiento del alumno
+                var fecha_actual= new Date();
+                var restaFechas=fecha_actual-fecha_nacimiento;
+                var anios=Math.floor(restaFechas/(1000*60*60*24*365.25));
+                var datosAlumno = {"Nombre":"Luis","Apellidos":"Mas Ros","Fecha":fecha_nacimiento.toLocaleDateString()};
+            
+                document.write("<table>");
+                for(var pos in datosAlumno ){
+                    document.write("<tr><th>"+pos+"</th><td>"+datosAlumno[pos]+"</td></tr>");
+                }
+                document.write("<tr><th>Edad</th><td>"+anios+" años</td></tr>");
+               
+
+                document.write("</table>");
+        </script>
+
+
+
+</body>
+</html>

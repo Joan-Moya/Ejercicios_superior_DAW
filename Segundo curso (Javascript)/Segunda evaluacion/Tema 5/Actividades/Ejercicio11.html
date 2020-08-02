@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+        <script>
+            function cambiodestino() {
+                miDestino =document.getElementById('destino').value;
+                alert("La marca seleccionada es: " + miDestino);
+            }
+        </script>
+
+</head>
+
+<body>
+        <form>
+            Seleccione una marca:
+                 <select id="destino" onchange="cambiodestino()">
+                    <option value="Lotus">Lotus</option>
+                    <option value="Massimo dutti">Massimo dutti</option>
+                    <option value="Mark maddox">Mark Maddox</option>
+                </select>
+        </form>
+</body> 
+</html>

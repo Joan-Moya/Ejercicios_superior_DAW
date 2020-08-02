@@ -1,0 +1,20 @@
+<script>
+
+    var fecha_actual = new Date(2018,9,2);
+    var fecha_final = new Date(2018, 9, 4);
+
+    document.write("Fecha Inicio: "+fecha_actual+"<br>");
+    document.write("Fecha Final: "+fecha_final+"<br>");
+    
+    var tiempo = fecha_final-fecha_actual; //esto devuelve el numero en milisegundos
+    var dias=Math.floor(tiempo/(1000*60*60*24));
+
+    var dinero=dias*55;
+    document.write("El dinero que recibe el trabajador son: "+dinero+" euros bruto <br>");
+    var retencion= dinero*0.12;
+    var dineroFinal= dinero-retencion;
+    document.write("La retencion es de: "+retencion+"<br>");
+    document.write("El dinero recibido final es: "+dineroFinal+" euros");
+
+
+</script>

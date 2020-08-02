@@ -1,0 +1,34 @@
+
+<html>
+    <head>
+        <style>
+        h2{
+            color:grey;
+        }
+        </style>
+    </head>
+<body>
+
+    <!--AQUI PONGO LOS TITULARES-->
+    <center>
+    <H1><b>ESTOS SON LOS TITULARES</b></H1><br><br><br>
+
+    <h2>ESTE ES EL TITULAR DE POLITICA</h2>
+    <h2>ESTE ES EL TITULAR DE ECONOMIA</h2>
+    <H2>ESTE ES EL TITULAR DE DEPORTES</H2>
+    </center>
+
+
+    <!--AQUI ELIJO QUE TITULAR QUIERO MOSTRAR Y LOS ENVIO POR POST-->
+    Que titular es el que quieres ver?
+
+    <form action="titulares03.php" method="POST">
+        <select name="titulares">
+                <option value="Politica">Politica</option> 
+                <option value="Economia">Economia</option> 
+                <option value="Deportes">Deportes</option>
+        </select>
+        <input type="submit"  name="Enviar" value="Enviar">
+    </form>
+</body>
+</html>

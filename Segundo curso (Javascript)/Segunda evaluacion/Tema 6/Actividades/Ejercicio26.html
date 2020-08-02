@@ -1,0 +1,18 @@
+<head>
+    <script>
+            function anadeElemento() {
+                    var nodo = document.createElement("li"); nodo.innerHTML="Los arboles cantan"; 
+                    var elementos=document.getElementById("Libros");
+                    var elemento1=elementos.firstElementChild;
+                    elementos.insertBefore(nodo,elemento1);
+         } 
+   </script>
+</head>
+<body>
+        <ul id="Libros">
+          <li>Memorias de idun</li>
+          <li>Donde los arboles cantan</li>
+        </ul>
+   <button onclick="anadeElemento()">A&ntilde;adir libro</button> 
+</body>
+   </html>

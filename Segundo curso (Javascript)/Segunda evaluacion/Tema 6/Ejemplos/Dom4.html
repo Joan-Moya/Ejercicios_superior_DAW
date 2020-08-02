@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>DOM</title>
+<script>
+function accesoDOM(){
+    var miLista= document.getElementById('lista');
+var elemento1= miLista.firstElementChild;
+var elemento3= miLista.lastElementChild;
+elemento1.style.backgroundColor='blue';
+elemento3.style.backgroundColor='green';
+var elemento2= miLista.children[1];
+elemento2.style.backgroundColor='yellow';
+var numeroHijos= miLista.children.length;
+alert(numeroHijos);
+var elementoPadre=
+document.getElementById("miParrafo").parentElement;
+elementoPadre.style.backgroundColor='red';
+elementoPadre.style.color='white';
+}
+</script>
+</head>
+<body onload="accesoDOM();">
+<ul id="lista">
+<li>Elemento 1</li>
+<li>Elemento 2</li>
+<li>Elemento 3</li>
+</ul>
+<div>
+Esto es el div
+<p id="miParrafo">Este es mi Parrafo</p>
+</div>
+</body>
+</html>

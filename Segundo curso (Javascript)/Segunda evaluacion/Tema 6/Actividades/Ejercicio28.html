@@ -1,0 +1,39 @@
+<html>
+<head>
+        <script>
+
+            var igualesGoogle=0;
+            
+            function url(){
+                var direcciones= document.getElementsByTagName("a");
+                
+                for(pos=0; pos<direcciones.length;pos++){
+                    
+
+                    if(direcciones[pos].getAttribute("href")=="http://google.es"){
+                        igualesGoogle++;
+                    }
+                } 
+                alert("Paginas iguales a google.es= "+igualesGoogle);
+                alert("Enlaces totales= "+direcciones.length);
+                alert("El penultimo enlace es= "+direcciones[direcciones.length-2].getAttribute("href"));
+
+            }
+              
+        </script>
+</head>
+<body>
+      <button onclick="url()">Comprobar</button> <br>
+
+
+            
+        <a href="http://google.es" name="enlace">Url</a><br>
+        <a href="http://facebook.es" name="enlace">Url</a><br>
+        <a href="http://google.es" name="enlace">Url</a><br>
+        <a href="http://cex.es" name="enlace">Url</a><br>
+        <a href="http://aulacampus.es" name="enlace">Url</a><br>
+        <a href="http://youtube.es" name="enlace">Url</a><br>
+        
+
+</body>
+</html>

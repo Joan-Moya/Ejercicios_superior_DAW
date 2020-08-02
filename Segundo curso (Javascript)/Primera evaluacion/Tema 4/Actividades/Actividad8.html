@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+            
+            var notaTeoria= prompt("Pon la nota sacasa de la teoria");
+            var notaPractica= prompt("Pon la nota sacada en la practica");
+
+            function calculoNota(notaTeoria,notaPractica){
+                var nota1= notaTeoria*0.20;
+                var nota2= notaPractica*0.80;
+                var nota3= nota1+nota2;
+                var resultado= nota3;
+
+                return resultado;
+            }
+            
+            var media= calculoNota(notaTeoria,notaPractica);
+            document.write("La media total del alumno es: "+Math.trunc(media));
+        </script>
+
+      
+    </body>
+</html>

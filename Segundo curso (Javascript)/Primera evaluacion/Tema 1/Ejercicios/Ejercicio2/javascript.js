@@ -1,0 +1,1 @@
+document.bgColor="#ff000";

@@ -1,0 +1,15 @@
+<script>
+
+var fecha = new Date();
+var horas=30;
+var sueldoFinal=0;
+var dia= fecha.getDay();
+
+if(dia==0 || dia==6){
+    sueldoFinal=horas*20;
+}else{
+    sueldoFinal=horas*15;
+}
+
+document.write("El sueldo final del trabajador es: "+sueldoFinal);
+</script>

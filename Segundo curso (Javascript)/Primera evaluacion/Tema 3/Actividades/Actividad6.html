@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+<body>
+
+
+    <input type="text" id="hora">
+
+    <script>
+    var tiempo_aviso = setInterval("fecha = new Date(); document.getElementById('hora').value=fecha.toLocaleTimeString()",1000);
+
+    </script>
+     <p onclick= 'clearInterval(tiempo_aviso)'>Parar </p>
+
+
+</body>
+</html>

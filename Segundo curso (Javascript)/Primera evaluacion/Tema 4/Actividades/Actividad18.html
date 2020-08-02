@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+        </style>
+    </head>
+    <body>
+        <script>
+            
+            var moviles={"Samsung":"Galaxy S8","Apple":"Iphone8","Nokia":"Lumia230","Sony":"Xperia z2"};
+
+            var existeSony=false;
+            var existeMoto=false;
+            for(var i in moviles){
+                
+                if(i=="Sony"){
+                    existeSony=true;
+                }
+
+                if(i=="Motorola"){
+                    existeMoto=true;
+                }
+            }   
+
+            if(existeSony){
+                document.write("La marca Sony existe <br>");
+            }else{
+                document.write("La marca Sony no existe <br>");
+            }
+            
+            if(existeMoto){
+                document.write("La marca Motorola existe <br>");
+            }else{
+                document.write("La marca Motorola no existe <br>");
+            }
+
+        </script>
+    </body> 
+</html>

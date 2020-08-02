@@ -1,0 +1,32 @@
+ <html>
+    <head>
+        <title>Practica</title>
+        <link rel="stylesheet" href="css.css">
+    </head>
+<body>
+<div class="full" id="noticia">
+    <h1>Noticia1</h1>
+    <h2>Este es el titulo de la noticia1</h2>
+    <img src='noticia1.png' width='300px' height='300px'>
+</div>
+
+    <script>
+    var noticias = ["<h1>Noticia1</h1><br><h2>Los 30 pueblos más bonitos de España, según los lectores de EL PAÍS</h2><img src='noticia1.png' width='350px' height='300px' >",
+        "<h1>Noticia2</h1><br><h2>Valencia estudiará la creación del alcalde de noche</h2><img src='noticia2.png' width=350px height=300px>",
+        "<h1>Noticia3</h1><br><h2>El Centro de Día que quiere acabar con la exclusión social de los menores en Valencia</h2><img src=noticia3.png width=350px height=300px>"];
+
+
+    function mostrar(){
+        var numeroRandom=Math.floor(Math.random()*3);
+
+        document.getElementById("noticia").innerHTML=noticias[numeroRandom];   
+        
+    }
+    var tiempo_aviso = setInterval("mostrar()",2000);
+    </script>
+
+
+    
+</body>
+   
+</html>

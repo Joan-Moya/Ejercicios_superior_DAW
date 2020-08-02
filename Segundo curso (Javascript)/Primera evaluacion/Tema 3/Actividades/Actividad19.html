@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+<body>
+
+<script>
+   
+   var valor1= Math.random()*12;
+   var valor2 = Math.random()*4;
+   var valor1Redondeado= Math.floor(valor1)+1; //floor es para redondear por abajo
+   var valor2Redondeado= Math.floor(valor2);
+   var nombreCartas="";
+
+   if(valor2Redondeado==0){
+       nombreCartas=" de oros";
+   }else if(valor2Redondeado==1){
+       nombreCartas=" de copas";
+   }else if(valor2Redondeado==2){
+       nombreCartas=" de espadas";
+   }else if(valor2Redondeado==3){
+       nombreCartas=" de bastos";
+   }
+
+   document.write(valor1Redondeado+nombreCartas);
+
+
+</script>
+</body>
+</html>

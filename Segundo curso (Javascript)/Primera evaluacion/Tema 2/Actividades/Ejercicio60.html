@@ -1,0 +1,40 @@
+<body>
+
+	<script type="text/javascript">
+
+     var numero=0;
+     var numerosIntroducidos=0;
+     var sumaImpares=0;
+     var mayorPares=0;
+     var cantImpares=0;
+
+        numero=parseInt(prompt("Pon un numero"));
+
+        while(numero>=0){
+         
+         numerosIntroducidos++;
+
+         if(numero%2!=0){
+             sumaImpares+=numero;
+             cantImpares++;
+         }else{
+
+             if(numero>mayorPares){
+                 mayorPares=numero;//aqui pongo que numero par es el mayor
+             }
+         }
+
+         numero=parseInt(prompt("Pon un numero"));
+
+
+      };
+
+     document.write("Numeros introducidos= "+numerosIntroducidos+"<br>");
+     var mediaImpares= sumaImpares/cantImpares;
+     document.write("Media de los numeros impares introducidos es de: "+mediaImpares+"<br>");
+     document.write("El mayor de los pares es el: "+mayorPares);
+
+    </script>
+    
+</body>
+</html>

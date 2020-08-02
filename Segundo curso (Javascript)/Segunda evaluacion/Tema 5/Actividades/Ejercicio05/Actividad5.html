@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+<body>
+    <script>
+        function mostrarMensaje(texto) { 
+            document.getElementById("mensaje").innerHTML = texto;
+        }
+    </script>
+     <img src ="sistema.jpg" usemap="#planetmap">
+
+     <!--Aqui delimitamos las zonas-->
+     <map name="planetmap">
+        <area shape="circle" coords="32,181,50" onmouseover="mostrarMensaje('El Sol')" onmouseout="mostrarMensaje('');">
+        <area shape="circle" coords="160,174,18" onmouseover="mostrarMensaje('El planeta es Mercurio')" onmouseout="mostrarMensaje('');">
+        <area shape="circle" coords="203,219,29" onmouseover="mostrarMensaje('El planeta es Venus')" onmouseout="mostrarMensaje('');">
+        <area shape="circle" coords="267,173,35" onmouseover="mostrarMensaje('Es el planeta Tierra')" onmouseout="mostrarMensaje('');">
+        <area shape="circle" coords="340,244,27" onmouseover="mostrarMensaje('Es el planeta Marte')" onmouseout="mostrarMensaje('');">
+        <area shape="circle" coords="289,125,10" onmouseover="mostrarMensaje('la Luna')" onmouseout="mostrarMensaje('');">
+        <area shape="circle" coords="379,147,40" onmouseover="mostrarMensaje('Es el planeta Jupiter')" onmouseout="mostrarMensaje('');">
+        <area shape="circle" coords="506,161,40" onmouseover="mostrarMensaje('Es el planeta Saturno')" onmouseout="mostrarMensaje('');">
+        <area shape="circle" coords="596,258,21" onmouseover="mostrarMensaje('Es el planeta Urano')" onmouseout="mostrarMensaje('');">
+        <area shape="circle" coords="612,93,21" onmouseover="mostrarMensaje('Es el planeta Neptuno')" onmouseout="mostrarMensaje('');">
+     </map>
+
+     <!--Aqui es donde se va a imprimir el mensaje-->
+      <p id="mensaje">
+      </p>
+</body>
+</html> 

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            .cuadro1{
+                 width:400px;
+                 height:500px;
+                 border:1px black solid;
+                 position:absolute;
+            }
+
+            .cuadro2{
+                 width:400px;
+                 height: 500px;
+                 border:1px black solid;
+                 margin-left:500px;
+                 position:absolute;
+            }
+
+
+        </style>
+    </head>
+<body>
+    <div class="cuadro1">
+            <iframe id="cuadro1" frameborder="0" width="400" height="400"></iframe>
+    
+
+        <script>
+
+            var webs= [["llueve.png","Este dia va a llover con chubascos"],
+                        ["sol.png","Este dia va a hacer sol con calor"],
+                        ["llueve.png","Este dia va a llover con chubascos"],
+                        ["sol.png","Este dia va a hacer sol con calor"],
+                        ["sol.png","Este dia va a hacer sol con calor"],
+                        ["llueve.png","Este dia va a llover con chubascos"],
+                        ["llueve.png","Este dia va a llover con chubascos"],
+                        
+                    ];
+
+            var dia= new Date();
+            var numDia=dia.getDay();
+            var contenido="<img src='"+webs[numDia][0]+"' width='60px' height='60px'>  <br>"+webs[numDia][1];
+            document.getElementById('cuadro1').contentDocument.body.innerHTML=contenido;
+            
+        </script>
+    
+</body>
+</html>

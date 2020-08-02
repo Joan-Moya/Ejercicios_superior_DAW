@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Ejemplo del objeto document</title>
+    </head>
+<body>
+    
+    <p onclick="location.reload(true);">Actualizar</p>
+    <p onclick="document.bgcolor='orange';">color fondo</p>
+    <h1><a name="mienlace" href="">Enlace</a></h1>
+
+    <script>
+        var enlaces= new Array("http://www.yahoo.es",
+        "http://www.google.es",
+        "http://www.elcorteingles.es/",
+        "http://www.rtve.es");
+
+        var pos=Math.floor(Math.random()*4);
+        document.links["mienlace"].href=enlaces[pos];
+    </script>
+
+    
+</body>
+</html>

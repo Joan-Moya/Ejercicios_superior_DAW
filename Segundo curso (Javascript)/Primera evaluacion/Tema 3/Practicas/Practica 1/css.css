@@ -1,0 +1,9 @@
+.full{
+    position:absolute;
+    width: 600;
+    height: 500px;
+    background-color:red;
+    margin-left:40px;
+    margin-top:40px;
+    color: black;
+}

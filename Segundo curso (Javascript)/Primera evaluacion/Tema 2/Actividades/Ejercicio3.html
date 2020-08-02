@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Ejercicio3</title>
+    </head>
+<body>
+    <script type="text/javascript">
+
+        //vamos a crear un array con los datos de un coche
+        var datosCoche = {"Marca":"Porche","Modelo":"Boxter S","Fecha":"12/03/2014","Cilindrada":1600,"Motor":"Porsche","Potencia":"180cv"};
+        
+        document.write("Estos son los datos del coche que estan dentro del array creado" + '<br>');
+        document.write("-------------------------------------------------------------------------------" + '<br>');
+
+        // Recorre el array asociativo
+			for (var pos in datosCoche) {
+				document.write(datosCoche[pos]+"<br>");
+			}
+    </script>
+</body>
+</html>

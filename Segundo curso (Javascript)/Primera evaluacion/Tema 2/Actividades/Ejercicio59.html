@@ -1,0 +1,35 @@
+<body>
+
+	<script type="text/javascript">
+
+     var numero1=0;
+     var numero2=0;
+     var numeroMayor=0;
+     var numeroMenos=0;
+
+    numero1=parseInt(prompt("Pon el primer numero"));
+    numero2=parseInt(prompt("Pon el segundo numero"));
+    
+    if(numero1 != numero2){
+
+        if(numero1>numero2){
+            numeroMayor=numero1;
+            numeroMenor=numero2;
+        }else{
+            numeroMenor=numero1;
+            numeroMayor=numero2;
+        }
+
+        do{
+            document.write(numeroMenor+"<br>");
+            numeroMenor+=7;
+        }while(numeroMenor<numeroMayor);
+
+    }else{
+        document.write("Los numeros son iguales!!!");
+    }
+
+    </script>
+    
+</body>
+</html>

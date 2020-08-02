@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+<body>
+
+<script>
+   
+   var mensajeCifrado="";
+   var mensajeNoCifrado= prompt("Pon un mensaje");
+
+    for (var e=0; e<mensajeNoCifrado.length; e++){
+        mensajeCifrado+=String.fromCharCode(mensajeNoCifrado.charCodeAt(e)+5);
+
+    }
+    document.write("El codigo del mensaje cifrado es: "+mensajeCifrado+"<br>");
+    mensajeNoCifrado="";
+ for (var e=0; e<mensajeCifrado.length; e++){
+        mensajeNoCifrado+=String.fromCharCode(mensajeCifrado.charCodeAt(e)-5);
+
+    }
+
+    document.write("El codigo del mensaje descifrado es: "+mensajeNoCifrado);
+    
+</script>
+</body>
+</html>   

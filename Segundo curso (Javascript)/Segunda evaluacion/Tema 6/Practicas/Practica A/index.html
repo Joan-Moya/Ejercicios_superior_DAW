@@ -1,0 +1,46 @@
+<html>
+<head>
+<script>
+        function titulo() {
+        var titulo=document.getElementById('titulo').innerHTML;
+        }
+
+        function autor() {
+        var autor=document.getElementById('autor').innerHTML;
+        }
+
+        function precio() {
+        var precio=document.getElementById('precio').innerHTML;
+        }
+
+        function editoriales() {
+        var editorial=document.getElementById('editorial').innerHTML;
+        }
+
+       function anadeElemento() {
+            var editorialNueva=document.getElementById('editorialNueva').value;
+            var nodo = document.createElement("option");
+            nodo.innerHTML=editorialNueva;
+            document.getElementById("editorial").appendChild(nodo);
+}
+
+
+</script>
+</head>
+<body>
+
+Titulo:<input type="text" id="titulo" onkeyup="titulo()" size="20"><br><br>
+Autor:<input type="text" id="autor" onkeyup="autor()" size="20"><br><br>
+Precio:<input type="text" id="precio" onkeyup="precio()" size="20"><br><br>
+Poblacion:<input type="text" id="poblacion" onkeyup="poblacion()" size="20"><br><br>
+
+Editorial: <select name="editorial" id="editorial">
+        <option id="anaya">Anaya</option> 
+        <option id="libroRojo">Libro Rojo</option> 
+        <option id="planeta">Planeta</option>
+     </select><br><br>
+
+Anadir editorial:<input type="text" id="editorialNueva" size="20"><button onclick="anadeElemento()">Añadir editorial: </button>
+
+</body>
+</html>

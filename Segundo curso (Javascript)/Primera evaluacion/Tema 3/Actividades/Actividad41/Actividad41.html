@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <style>
+
+    </style>
+<body>
+
+<script>
+   
+   var aleatorio= Math.floor(Math.random()*3);
+   var periodicos= [["red","Elmundo.png","https://www.elmundo.es/"],
+                    ["yellow","libertad.png","https://www.libertaddigital.com/"],
+                    ["green","publico.png","https://www.publico.es/"]
+                  ];
+
+
+   if(aleatorio==0){
+     document.bgColor=periodicos[0][0];
+     document.write("<a href='"+periodicos[0][2]+"'> <img src='"+periodicos[0][1]+"'><a/>");
+    
+   }else if(aleatorio==1){
+    document.bgColor=periodicos[1][0];
+    document.write("<a href='"+periodicos[1][2]+"'> <img src='"+periodicos[1][1]+"'><a/>");
+   }else if(aleatorio==2){
+    document.bgColor=periodicos[2][0];
+    document.write("<a href='"+periodicos[2][2]+"'> <img src='"+periodicos[2][1]+"'><a/>");
+   }
+    
+</script>
+</body>
+</html>   

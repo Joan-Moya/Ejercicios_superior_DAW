@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+       
+       var sumaSueldos=0;
+       var cuantosMasDeMil=0;
+
+        for(var cont=1; cont<10; cont++){
+
+            var sueldoPedido = parseInt(prompt("Pon un sueldo: "));
+
+            sumaSueldos+=sueldoPedido;
+
+            if(sueldoPedido>1000){
+                cuantosMasDeMil++;
+            }
+        }
+
+        document.write("La suma de todos los sueldos introducidos es: "+sumaSueldos+"<br>");
+        document.write("Sueldos introducidos mayores de 1000: "+cuantosMasDeMil+"<br>")
+
+
+	</script>
+
+</body>
+</html>

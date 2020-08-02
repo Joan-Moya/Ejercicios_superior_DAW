@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function comprobarNombre(elemento){
+                var recogido=elemento.value;//el ".value" es proque es el elemento del imput
+                
+                if( isNaN(recogido) ) {
+                  alert('No es un numero');
+                }else{
+                    alert('Es un numero');
+                }
+
+            }
+            
+            
+        </script>
+</head>
+<body>
+   
+    Edad: <input type="text" onblur="comprobarNombre(this)"><br>
+</body>
+</html>

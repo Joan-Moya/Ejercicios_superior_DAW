@@ -1,0 +1,22 @@
+<html>
+    <head>
+       <title></title>
+    <style>
+        p{
+            font-size:20px;
+           }
+    </style>
+       <script>
+            function elementosDIV(){
+                var p= document.getElementsByTagName(""); 
+                var tamanio="40px";
+                for(pos=0; pos<p.length;pos++){
+                    p[pos].style.fontSize=tamanio;
+                    }
+                } 
+        </script>
+    </head>
+        <body onload="elementosDIV()">
+        <p>Primer div</p> <p>Segundo div</p> <p>Tercer div</p>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax</title>
+<style>
+    table{
+        border:1px black solid;
+        border-collapse:collapse;
+    }
+    td{
+        border:1px black solid;
+        border-collapse:collapse;
+    }
+
+    tr{
+        border:1px black solid;
+        border-collapse:collapse;
+    }
+</style>
+<script type="text/javascript">
+        // Creamos el objeto XMLHttpRequest que permite la
+        // comunicación asíncrona con el servidor
+        var peticion = new XMLHttpRequest();
+
+
+        function obtenerDatosServidor() {
+            // Cada vez que cambia el estado del objeto XMLHttpRequest
+            // se ejecuta la funcion de callback
+            peticion.onreadystatechange = function () {
+            // Si 4 Comunicación completada y 200 comunicación OK
+            // devuelve el caja el contenido del fichero que se
+            // almacena en la propiedad responseText del objeto
+                if (peticion.readyState == 4 && peticion.status == 200) {
+            //Obtenemos la respuesta del servidor en formato XML
+            var datosXml = peticion.responseXML;
+            //Obtenemos la raíz Obras del documento
+            var datos = datosXml.getElementsByTagName("Peliculas")[0];
+            // Obtenemos todos los libros del fichero XML
+            var peliculas = datos.getElementsByTagName("pelicula");
+            //Recorremos todos los elementos Libro del documento
+            
+            var cadena="<table>";
+            cadena+="<tr> <td>Codigo</td> <td>Titulo</td> <td>duracion</td> <td>precio</td> <td>cmoral</td>";
+            for(var i = 0; i < peliculas.length; i++){
+                 pelicula = peliculas[i];
+
+                cadena+="<tr>";
+                 codigo = pelicula.getElementsByTagName("codigo")[0];
+                 valorcodigo = codigo.innerHTML;
+
+
+                 titulo = pelicula.getElementsByTagName("titulo")[0];
+                 valortitulo = titulo.innerHTML;
+
+                 duracion = pelicula.getElementsByTagName("duracion")[0];
+                 valorduracion = duracion.innerHTML;
+
+                 precio = pelicula.getElementsByTagName("precio")[0];
+                 valorprecio = precio.innerHTML;
+                 
+                 cmoral = pelicula.getElementsByTagName("cmoral")[0];
+                 valorcmoral = cmoral.innerHTML;
+                cadena+="<td>"+valorcodigo+"</td><td>"+valortitulo+"</td><td>"+valorduracion+"</td><td>"+valorprecio+"</td><td>"+valorcmoral+"</td>";
+                 cadena+="</tr>";
+
+            }
+            cadena+="</table>";
+            document.getElementById('caja').innerHTML =cadena;
+            
+        }
+    };
+// Configura conexión asincrona con una URL
+peticion.open("GET", "datosXML.xml", true);
+// Realiza la conexión con la URL
+peticion.send();
+}
+</script>
+</head>
+<body>
+<form>
+<input type = "button" value = "Obtener Datos"
+onclick = "obtenerDatosServidor()">
+</form>
+<div id="caja"></div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!--Una letra minuscula s o n
+
+
+<script>
+function validaDNI(){
+    valor = document.getElementById("dni").value;
+    var letras = ['T','R','W','A','G','M','Y','F','P','D','X','B',
+    'N','J','Z','S','Q','V','H','L','C','K','E','T']; if( !{N,M}.test(valor)) ){
+                alert('Formato inválido');
+                return false;
+          }
+    }
+</script>
+
+-->
+
+---------------------------
+
+<!--Teléfono 9 cifras numéricas. Ejemplo: 963112789
+
+        <script>
+            function validaTelefono(){
+                valor = document.getElementById("telefono").value; if( !(/^\d{9}$/.test(valor)) ) {
+                alert("Formato Telefono NO Válido");
+                    return false;
+            }
+            return true;
+        }
+
+        </script>
+
+-->
+
+---------------------------
+
+<!--DNI 8 cifras y un carácter. Ejemplo: 24.567.890-P
+
+    <script>
+        function validaDNI(){
+                valor = document.getElementById("dni").value;
+                var letras = ['T','R','W','A','G','M','Y','F','P','D','X','B',
+                'N','J','Z','S','Q','V','H','L','C','K','E','T']; if( !(/^\d{8}[A-Z]$/.test(valor)) ){
+            alert('Formato inválido');
+            return false;
+      }
+        if(valor.charAt(8) != letras[(valor.substring(0, 8))%23]){ alert('Letra DNI no válida');
+                return false;
+        }
+        return true;
+        }
+    </script>
+
+-->
+
+---------------------------
+
+<!--Código Postal 5 cifras numéricas. Por ejemplo: 46023
+
+    <script>
+            function validaTelefono(){
+                valor = document.getElementById("telefono").value; if( !(/^\d{5}$/.test(valor)) ) {
+                alert("Formato Telefono NO Válido");
+                    return false;
+            }
+            return true;
+        }
+
+        </script>
+-->
+
+---------------------------
+
+<!--Teléfono internacional. Per ejemplo (+34)963-456-789
+
+    function validaTelefono(){
+        valor = document.getElementById("telefono").value; if( !(/^\d{9}$/.test(valor)) ) {
+        alert("Formato Telefono NO Válido");
+            return false;
+      }
+      return true;
+}
+
+-->
+
+---------------------------
+
+<!--Fecha DD/MM/AAAA. Por ejemplo: 05/06/2013
+
+    function validaEdat(){
+    vesSumant();
+    vfalladata = false;
+
+    
+    var vregexNaix = /^([012][1-9]|3[01])(\/)(0[1-9]|1[012])\2(\d{4})$/;
+
+
+    vdataNaix = document.formu.dataNaix.value;
+    vanyData = vdataNaix.substring(vdataNaix.length-4, 4);
+
+    if((!vregexNaix.test(vdataNaix)) || (/^(\d{4})$/.test(vanyData))){
+        alert("pon bien la fecha");
+        document.formu.dataNaix.value = "";
+        document.formu.dataNaix.focus();
+        return false;
+    }
+
+    controlaCaselles();
+    return true;
+}
+
+-->
+
+---------------------------
+
+<!--Direccion email usuario@dominio.ext . Por ejemplo: luis@ono.com
+
+    <script type="text/javascript"> function validaEmail() {
+           valor = document.getElementById("correo").value; 
+           if(!(/^\w+(\.*\w+)*@\w+(\.*\w+)*\.\w+$/.test(valor)) ) {
+           alert('Correo NO Válido');
+           return false;
+       }
+       return true;
+    }
+</script>
+
+-->
+
+---------------------------
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+       var mayorAltura=0;
+       var mayoresEdad=0;
+       var totalEdades=0;
+       var totalAltura=0;
+
+        for(var cont=1; cont<5; cont++){
+            var edadAlumno = parseInt(prompt("Pon la edad del alumno: "));
+            var estaturaAlumno = parseInt(prompt("Pon la estatura del alumno: "));
+
+            if(edadAlumno>=18){
+                mayoresEdad++;
+            }
+            
+            if(estaturaAlumno>170){
+                mayorAltura++;
+            }
+            
+        totalEdades+=edadAlumno;
+        totalAltura+=estaturaAlumno;
+            
+        }
+        
+        var mediaEdades=totalEdades/cont;
+        var mediaAltura=totalAltura/cont;
+
+        document.write("-La media de las edades introducidas es: "+mediaEdades+"<br>");
+        document.write("-La media de las alturas introducidas es: "+mediaAltura+"<br>");
+        document.write("-De todos los alumnos introducidos "+mayoresEdad+" son mayores de edad."+"<br>");
+        document.write("-De todos los alumnos "+mayorAltura+" tienen una estatura superior a 1.75cm");
+
+        
+
+
+	</script>
+
+</body>
+</html>

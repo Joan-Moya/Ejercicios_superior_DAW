@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>DOM 1</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+    </style>
+<script>
+        function elementosDIV(){
+                var divs= document.getElementsByTagName("div");
+                var colores = ['red','green','yellow','blue'];
+                     alert(divs.length);
+        for(pos=0; pos<divs.length;pos++){
+                num = Math.floor(Math.random()*4);
+                divs[pos].style.backgroundColor=colores[num];
+        }
+    }
+</script>
+
+</head>
+    <body onload="elementosDIV()">
+            <div>Primer div</div>
+            <div>Segundo div</div>
+            <div>Tercer div</div>
+    </body>
+</html>

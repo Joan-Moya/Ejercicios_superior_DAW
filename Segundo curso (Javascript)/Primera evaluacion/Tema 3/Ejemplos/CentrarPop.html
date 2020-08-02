@@ -1,0 +1,30 @@
+<script>
+    function ventanaCondiciones() {
+        var tipoNav = 0;
+        var navegador = navigator.userAgent;
+
+        if(navegador.indexOf('MSIE') !=-1){
+            tipoNav = 1;
+        }
+
+        if(tipoNav == 1) {
+            posX = window.screenLeft;
+            posY = window.screenTop;
+            ancho = document.body.clientWidth;
+            alto = document.body.clientHeight;
+        } else {
+            posX = window.screenX;
+            posY = window.screenY;
+            ancho = window.innerWidth;
+            alto = window.innerHeight;
+        }
+
+        anchopop=400;
+        altopop=200;
+        posXpop= posX+((ancho-anchopop)/2);
+        posYpop = posY+((alto-altopop)/2);
+
+        window.open("condicionesLegales.html","Condiciones","left="+posXpop+", top="+posYpop+", width="+anchopop+", height="+altopop);
+    }
+</script>
+<input type="bottom" value="Condiciones de uso" onclick="ventanaCondiciones();">

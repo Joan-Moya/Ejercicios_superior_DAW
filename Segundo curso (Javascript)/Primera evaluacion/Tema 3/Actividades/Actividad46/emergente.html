@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            .cuadro1{
+                 width:400px;
+                 height:500px;
+                 border:1px black solid;
+                 position:absolute;
+            }
+
+        </style>
+    </head>
+<body>
+   
+
+        <script>
+
+            
+
+                var nombre="Joan";
+                var contra="contra123";
+
+
+                var nombrePedido=prompt("Pon tu nombre");
+                var contraPedida=prompt("Pon una contra");
+
+                if(nombre == nombrePedido && contra ==contraPedida){
+                    window.opener.document.write("Contrase&ntilde;a correcta");
+                    window.close();
+                }else{
+                    document.write("Acceso denegado");
+                }
+
+
+            
+        </script>
+    
+</body>
+</html>

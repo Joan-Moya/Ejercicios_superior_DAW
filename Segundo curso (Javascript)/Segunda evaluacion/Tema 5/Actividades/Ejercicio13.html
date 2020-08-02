@@ -1,0 +1,16 @@
+<html>
+<head>
+<script>
+function confirmaEnvio() {
+miNombre = document.getElementById('nombre').value;
+alert("El numero puesto es "+miNombre);
+}
+</script>
+</head>
+<body>
+        <form onsubmit="confirmaEnvio()" >
+            Pon un numero <input id="nombre" type="number" size="20">
+            <input type="submit">
+        </form>
+</body>
+</html>

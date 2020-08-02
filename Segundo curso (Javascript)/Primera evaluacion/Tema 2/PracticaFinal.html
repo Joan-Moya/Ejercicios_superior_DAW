@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Practica final</title>
+        <style>
+            table,td{
+                border:1px solid black;
+                border-collapse:collapse;
+            }
+        
+        </style>
+    </head>
+
+<body>
+    <script>
+    
+    var encontrado=-1;
+    var codigo = parseInt(prompt("Pon el libro que quieres consultar: "));
+    var libros=[{"Codigo":1,"Titulo":"Acess para windows","Autor":"Charles Siegel","Editorial":"Anaya","Tema":"informatica","ISBN":"84-7614-759-7","Paginas":140,"Precio":45.67},{"Codigo":2,"Titulo":"Salud","Autor":"Eduardo Almansa","Editorial":"Deusto","Tema":"Medicina","ISBN":"24-3547-590-1","Paginas":153,"Precio":23.18},{"Codigo":3,"Titulo":"Redes de computadores","Autor":"Luis Cárcel","Editorial":"Paraninfo","Tema":"Informatica","ISBN":"47-8829-435-7","Paginas":215,"Precio":32.86}];
+    
+       for(pos in libros) {
+           if(libros[pos]["Codigo"]==codigo){
+                encontrado=pos;
+                break;
+           }
+       }
+
+    
+
+    </script>
+
+<!--A partir de aqui voy a crear la tabla en html-->
+
+<table border="1">
+
+    <tr>
+        <td>Codigo</td>
+        <td><script> document.write(libros[encontrado]["Codigo"]);</script></td>
+    </tr>
+    <tr>
+        <td>Título</td>
+        <td><script> document.write(libros[encontrado]["Titulo"]);</script></td>
+    </tr>
+    <tr>
+        <td>Autor</td>
+        <td><script> document.write(libros[encontrado]["Autor"]);</script></td>
+    </tr>
+    <tr>
+        <td>Editorial</td>
+        <td><script> document.write(libros[encontrado]["Editorial"]);</script></td>
+    </tr>
+    <tr>
+        <td>Tema</td>
+        <td><script> document.write(libros[encontrado]["Tema"]);</script></td>
+    </tr>
+    <tr>
+        <td>ISBN</td>
+        <td><script> document.write(libros[encontrado]["ISBN"]);</script></td>
+    </tr>
+    <tr>
+        <td>Páginas</td>
+        <td><script> document.write(libros[encontrado]["Paginas"]);</script></td>
+    </tr>
+    <tr>
+        <td>Precio</td>
+        <td><script> document.write(libros[encontrado]["Precio"]);</script>&euro;</td>
+    </tr>
+
+</table>
+</body>
+</html>

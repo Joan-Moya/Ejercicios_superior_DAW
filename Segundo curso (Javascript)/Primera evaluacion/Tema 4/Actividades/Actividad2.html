@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+            var edad=prompt("Pon la edad:"); 
+            var sueldo=prompt("Pon el sueldo del empleado:");
+            var edadEntera=parseInt(edad);
+            var sueldoFloat=parseFloat(sueldo);
+            var comision=0;
+
+            document.write("La edad introducida es: "+edadEntera+"<br>");
+            document.write("el sueldo introducido es: "+sueldoFloat+"<br>");
+
+            if(edadEntera>30 && sueldoFloat>2000){
+                comision=sueldoFloat*0.10;
+            }else{
+                comision=sueldoFloat*0.05;
+            }
+            document.write("<br>");
+            document.write("La comision impuesta al sueldo es: "+comision);
+
+
+        </script>
+    </body>
+</html>

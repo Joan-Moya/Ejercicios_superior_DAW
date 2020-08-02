@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+            function ventana(){
+                var navegador = ((window.navigator.userAgent.indexOf("Trident") != -1) || (window.navigator.userAgent.indexOf("MSIE") != -1));
+
+                if(navegador){
+                    document.write("<p>PosX: " + window.screenLeft);
+                    document.write("<br>PosY: " + window.screenTop + "</p>");
+                    document.write("<p>Ancho: " + document.body.clientWidth);
+                    document.write("<br>AltoY: " + document.body.clientHeight + "</p>");
+                }else{
+                    document.write("<p>PosX: " + window.screenX);
+                    document.write("<br>PosY: " + window.screenY + "</p>");
+                    document.write("<p>Ancho: " + window.innerWidth);
+                    document.write("<br>AltoY: " + window.innerHeight + "</p>");
+                }
+            }
+        </script>
+    </head>
+<body>
+    <input type="button" value="Datos ventana" onclick="ventana()">
+</body>
+</html>

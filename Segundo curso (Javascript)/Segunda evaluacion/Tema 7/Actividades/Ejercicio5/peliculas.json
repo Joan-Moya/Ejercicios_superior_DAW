@@ -1,0 +1,7 @@
+{
+    "listadoPeliculas":[
+        {"codigo":100,"titulo":"Casper","tema":"Aventuras","duracion":124,"precio":2.50,"cmoral":"Todos los publicos"},
+        {"codigo":115,"titulo":"El libro de la selva","tema":"Aventuras","duracion":132,"precio":2.75,"cmoral":"Todos los publicos"},
+        {"codigo":123,"titulo":"Batman Forever","tema":"Accion","duracion":98,"precio":3.25,"cmoral":"Mayores de 7 años"}
+    ]
+}

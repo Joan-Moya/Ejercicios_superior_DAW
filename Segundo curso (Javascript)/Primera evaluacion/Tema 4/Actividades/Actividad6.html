@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <script>
+            
+            var longitud= prompt("Pon la longitud de la piscina");
+            var anchura=prompt("Pon la anchura de la piscina");
+            var profundidad= prompt("Pon la profuncidad de la piscina");
+
+            //calculamos los metros cubicos de una piscina cuadrada
+            function piscinaCuadrada(longitud, anchura, profundidad){
+                var calculo1=longitud*anchura;
+                var calculo2=calculo1*profundidad;
+                return calculo2;
+            }
+
+            //calculamos los metros cubicos de una piscina ovalada
+            function piscinaOvalada(longitud,anchura,profundidad){
+                var calculo1=longitud*anchura;
+                var calculo2=calculo1*profundidad;
+                var calculo3=calculo2*0.89;
+                return calculo3;
+            }
+
+            //calculamos los metros cubicos de una piscina redonda
+            function piscinaRedonda(longitud,longitud,profundidad){
+                var calculo1=longitud*longitud;
+                var calculo2=calculo1*profundidad;
+                var calculo3=calculo2*0.79;
+                return calculo3;
+            }
+
+            document.write("Los metros cuadrados de la piscina cuadrada es: "+piscinaCuadrada(longitud,anchura,profundidad)+"<br>");
+            document.write("Los metros cuadrados de la piscina ovalada es: "+piscinaCuadrada(longitud,anchura,profundidad)+"<br>");
+            document.write("Los metros cuadrados de la piscina redonda es: "+piscinaCuadrada(longitud,longitud,profundidad));
+
+            
+            
+        </script>
+
+      
+    </body>
+</html>

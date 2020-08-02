@@ -1,0 +1,30 @@
+<html>
+    <head>
+       <title></title>
+    <style>
+        p{
+            font-size:20px;
+           }
+    </style>
+       <script>
+            function nodoHermanoSig() {
+
+                var valor = document.getElementById("parrafo"); 
+                
+                alert(valor.nextElementSibling.innerHTML); 
+                alert(valor.nextElementSibling.nextElementSibling.innerHTML); 
+                
+                }       
+    
+
+        </script>
+    </head>
+        <body>
+            <div>
+                <p id="parrafo">Parrafo1</p>
+                <p>Parrafo2</p>
+                <p>Parrafo3</p>
+            </div>
+        <button onclick="nodoHermanoSig()">Siguiente </button>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+        
+        </style>
+    </head>
+<body>
+
+    <div>
+        <iframe class="full" id="foto1">
+                
+        </iframe>
+
+        <iframe class="full" id="foto2">
+              
+        </iframe>
+    </div>
+
+    <div>
+
+        <iframe class="full" id="foto3">
+                
+        </iframe>
+
+        <iframe class="full" id="foto4">
+                
+        </iframe>
+    </div>
+         <script>
+
+    var imagenes = ["<img src='noticia1.png' width='350px' height='300px' >",
+        "<img src='noticia2.png' width=350px height=300px>",
+        "<img src=noticia3.png width=350px height=300px>"];
+
+
+
+    function mostrar(){
+        var numeroRandom=Math.floor(Math.random()*3);
+        var numeroRandom1=Math.floor(Math.random()*3);
+        var numeroRandom2=Math.floor(Math.random()*3);
+        var numeroRandom3=Math.floor(Math.random()*3);
+      
+
+        document.getElementById("foto1").contentDocument.body.innerHTML=imagenes[numeroRandom]; 
+        document.getElementById("foto2").contentDocument.body.innerHTML=imagenes[numeroRandom1]; 
+        document.getElementById("foto3").contentDocument.body.innerHTML=imagenes[numeroRandom2]; 
+        document.getElementById("foto4").contentDocument.body.innerHTML=imagenes[numeroRandom3];   
+        
+    }
+    var tiempo_aviso = setInterval("mostrar()",1000);
+
+
+
+
+    </script>
+
+</body>
+</html>

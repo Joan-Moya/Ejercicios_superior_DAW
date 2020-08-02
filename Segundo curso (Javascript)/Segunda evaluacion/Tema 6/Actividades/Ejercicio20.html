@@ -1,0 +1,27 @@
+<html>
+   <head>
+<script>
+        function nodoHermanoSig() {
+            var valor = document.getElementById("elemento1"); 
+            document.getElementById("parrafo").innerHTML=
+            valor.nextElementSibling.innerHTML; 
+        }
+
+        function nodoHermanoAnt() {
+            var valor = document.getElementById("elemento2"); 
+            document.getElementById("parrafo").innerHTML=valor.previousElementSibling.innerHTML;
+        }
+</script>
+   </head>
+<body>
+     <p>-----LISTA DE ALUMNOS-----</p>
+        <ul>
+            <li id="elemento1">Joan</li>
+            <li id="elemento2">Alberto</li>
+        </ul>
+
+        <button onclick="nodoHermanoSig()">Siguiente</button> <button onclick="nodoHermanoAnt()">Anterior</button> 
+        
+       <p id="parrafo">Joan</p>
+</body>
+</html>

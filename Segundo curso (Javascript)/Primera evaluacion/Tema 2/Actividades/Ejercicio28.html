@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+       var numerosPositivosIntroducidos=0;
+        var contadorPositivos=0;
+
+        var numerosNegativosIntroducidos=0;
+        var contadorNegativos=0;
+
+        var cerosIntroducidos=0;
+
+    for(var introducidos=1; introducidos<=10; introducidos++){
+
+        var numero = parseInt(prompt("Pon un numero: "));
+        
+       
+        if(numero>0){
+            numerosPositivosIntroducidos+=numero;//aqui guardamos la suma de los numeros positivos introducido
+            contadorPositivos++;
+        }
+
+        if(numero<0){
+            numerosNegativosIntroducidos+=numero;//aqui guardamos la suma de los numeros negativos introducido
+            contadorNegativos++;
+        }
+
+        if(numero==0){
+            cerosIntroducidos++;
+        }
+    }
+        var mediaPositivos=numerosPositivosIntroducidos/contadorPositivos;
+        var mediaNegativos=numerosNegativosIntroducidos/contadorNegativos;
+
+        document.write("-La media de los numeros positivos introducidos es: "+mediaPositivos+"<br>");
+        document.write("-La media de los numeros negativos introducidos es: "+mediaNegativos+"<br>");
+        document.write("-Cantidad de ceros introducidos: "+cerosIntroducidos+"<br>");
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ajax</title>
+    <script type="text/javascript">
+        // Creamos el objeto XMLHttpRequest que permite la
+        // comunicación asíncrona con el servidor
+        var peticion = new XMLHttpRequest();
+
+        function compruebaCorreo() {
+            // Cada vez que cambia el estado del objeto XMLHttpRequest
+            // se ejecuta la funcion de callback
+            peticion.onreadystatechange = function () {
+            // Si 4 Comunicación completada y 200 comunicación OK
+            // devuelve el caja el contenido del fichero que se
+            // almacena en la propiedad responseText del objeto
+            if (peticion.readyState == 4 && peticion.status == 200) {
+                document.getElementById("caja").innerHTML = peticion.responseText;
+            }
+        };
+
+        // Configura conexión asincrona con una URL
+            peticion.open("POST", "comprueba.php", true);
+        // Realiza la conexión con la URL
+            var correo = "correo="+document.getElementById("correo").value;
+            peticion.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            peticion.send(correo);
+            }
+    </script>
+
+</head>
+<body>
+        <form>
+           Pon el nombre del usuario: <input type="text" id="correo" onkeyup="compruebaCorreo()";> (Angel,Carla,Joan)
+        </form>
+<div id="caja"></div>
+</body>
+</html>
